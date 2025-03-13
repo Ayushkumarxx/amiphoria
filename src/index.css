@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    color: #000;
+  }
+}
+@layer components {
+  .spon_img {
+    @apply w-[100px] mix-blend-multiply grayscale-100;
+  }
+}
+body {
+ 
+  font-family: "Lexend", sans-serif;
+  background-color: #bc91f3;
+  opacity: 1;
+  background-image:  linear-gradient(#cacaca 1px, transparent 1px), linear-gradient(to right, #cacaca 1px, #bc91f3 1px);
+  background-size: 150px 150px;
+}
+
