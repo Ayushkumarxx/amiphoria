@@ -63,6 +63,10 @@ opacity: 0.8;
 background: radial-gradient(circle, transparent 20%, #F2ECE7 20%, #F2ECE7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #F2ECE7 20%, #F2ECE7 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#b4b4b4 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #b4b4b4 1.4000000000000001px, #F2ECE7 1.4000000000000001px) -0.7000000000000001px 0;
 background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
   }
+  .writing-mode-vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
 }
 body {
   font-family: "Lexend", sans-serif;

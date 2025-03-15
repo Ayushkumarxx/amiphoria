@@ -1,8 +1,8 @@
 import Home from "./home";
-import About from "./about";
+import Register from "./register";
 import Sponsors from "./sponsors";
 import Team from "./team";
 import Events from "./events";
 import Update from "./update"
 
-export {Home, About, Sponsors, Team, Events, Update};
+export {Home, Register, Sponsors, Team, Events, Update};

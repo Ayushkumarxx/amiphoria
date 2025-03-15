@@ -22,9 +22,7 @@ const Navbar = () => {
         <div>
           <a href="">Updates</a>
         </div>
-        <div>
-          <a href="">About us</a>
-        </div>
+     
       </div>
       <div>
         <button className="bg-[#A9EB09] text-black py-[10px] px-[40px] rounded-[8px] font-semibold">
