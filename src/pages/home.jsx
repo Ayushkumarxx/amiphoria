@@ -139,8 +139,8 @@ const Footer = () => {
 
           <h3 className="text-lg font-semibold mt-4 mb-2">Address</h3>
           <p className="text-sm">
-          Hec core area, near railway crossing, <br />
-           pundag , ranchi , <br /> jharkhand 834001
+            Hec core area, near railway crossing, <br />
+            pundag , ranchi , <br /> jharkhand 834001
           </p>
         </div>
 
@@ -159,17 +159,23 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3">About Amiphoria.</h3>
           <p className="text-sm">
-            Amiphoria is a yearly event organized at Amity University
-            Jharkhand. We aim to bring together like-minded individuals from
-            various fields to create a vibrant and inclusive community.
+            Amiphoria is a yearly event organized at Amity University Jharkhand.
+            We aim to bring together like-minded individuals from various fields
+            to create a vibrant and inclusive community.
           </p>
 
           {/* Social Buttons */}
           <div className="flex gap-3 mt-4">
-            <button className="border border-white px-3 py-1 rounded-full text-sm cursor-pointer" onClick={() => navigateTo(Routes.Insta , true)}>
+            <button
+              className="border border-white px-3 py-1 rounded-full text-sm cursor-pointer"
+              onClick={() => navigateTo(Routes.Insta, true)}
+            >
               Instagram
             </button>
-            <button className="border border-white px-3 py-1 rounded-full text-sm cursor-pointer" onClick={() => navigateTo(Routes.LinkedIn , true)}>
+            <button
+              className="border border-white px-3 py-1 rounded-full text-sm cursor-pointer"
+              onClick={() => navigateTo(Routes.LinkedIn, true)}
+            >
               LinkedIn
             </button>
           </div>
@@ -218,8 +224,8 @@ const Home = () => {
   const socialLinks = [
     { icon: <FaInstagram />, name: "Instagram", link: Routes.Insta },
     // { icon: <FaXTwitter />, name: "Twitter" },
-    { icon: <FaYoutube />, name: "YouTube" , link: Routes.Yt},
-    { icon: <FaFacebook />, name: "Facebook", link: Routes.FB},  
+    { icon: <FaYoutube />, name: "YouTube", link: Routes.Yt },
+    { icon: <FaFacebook />, name: "Facebook", link: Routes.FB },
     { icon: <FaLinkedin />, name: "LinkedIn", link: Routes.LinkedIn },
   ];
   return (
@@ -237,7 +243,7 @@ const Home = () => {
           />
         </div>
         {/* head text */}
-        <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  max-md:mt-4">
+        <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  max-md:mt-12">
           <div className="text-[162px] max-md:text-[56px] font-extrabold relative ">
             Amiphoria{" "}
             <span className="absolute text-[24px] max-md:text-[12px] left-[15px] top-[0px]">
@@ -282,14 +288,23 @@ const Home = () => {
           {/* socials */}
 
           <div className="flex flex-col gap-10">
-            <div  className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.Insta, true)}>
+            <div
+              className="cursor-pointer hover:scale-105 "
+              onClick={() => navigateTo(Routes.Insta, true)}
+            >
               <FaInstagram className="text-3xl max-md:text-[24px]" />{" "}
             </div>
-            <div className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.Yt, true)}>
+            <div
+              className="cursor-pointer hover:scale-105 "
+              onClick={() => navigateTo(Routes.Yt, true)}
+            >
               {" "}
               <FaYoutube className="text-3xl max-md:text-[24px]" />
             </div>
-            <div className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.FB, true)}>
+            <div
+              className="cursor-pointer hover:scale-105 "
+              onClick={() => navigateTo(Routes.FB, true)}
+            >
               {" "}
               <FaFacebook className="text-3xl max-md:text-[24px]" />
             </div>

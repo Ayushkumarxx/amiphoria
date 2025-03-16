@@ -42,7 +42,7 @@ const Team = () => {
 
         {/* left section */}
         <div>
-          <div className="text-[142px] max-md:text-[36px] leading-none mb-2 font-bold">MEET</div>
+          <div className="text-[142px] max-md:text-[36px] leading-none mb-2 font-bold max-xl:text-[124px]">MEET</div>
           <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] ">
             Chill <IoSparklesSharp /> Guyz
           </div>
@@ -52,7 +52,7 @@ const Team = () => {
           <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] mb-2 ">
             Unique <IoSparklesSharp /> Talented <IoSparklesSharp /> Perfect
           </div>
-          <div className="text-[142px] max-md:text-[36px] font-bold leading-none">OUR TEAM</div>
+          <div className="text-[142px] max-md:text-[36px] font-bold leading-none max-xl:text-[114px]">OUR TEAM</div>
         </div>
       </section>
 
