@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="h-full w-[120px]">
         <img src={logo} alt="" className="h-full w-full object-contain brightness-0" />
       </div>
-      <div className="flex gap-[50px] text-[18px] font-semibold">
+      <div className="flex gap-[50px] text-[18px] font-semibold max-md:hidden">
         <div>
           <a href="">Home</a>
         </div>
