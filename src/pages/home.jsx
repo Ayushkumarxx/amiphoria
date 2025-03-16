@@ -162,6 +162,13 @@ const TicketCard2 = ({ img }) => {
   );
 };
 const Home = () => {
+  const socialLinks = [
+    { icon: <FaInstagram />, name: "Instagram" },
+    { icon: <FaXTwitter />, name: "Twitter" },
+    { icon: <FaYoutube />, name: "YouTube" },
+    { icon: <FaFacebook />, name: "Facebook" },
+    { icon: <FaLinkedin />, name: "LinkedIn" },
+  ];
   return (
     <>
       <Navbar />
@@ -305,7 +312,6 @@ const Home = () => {
       {/* what is amiphoria  */}
 
       <div className="nt-whatfor w-full h-[700px] flex flex-col justify-center items-center bg-[#B4FF52] text-center p-2.5">
-
         {/* title */}
         <div className="text-[18px] max-md:text-[14px] font-bold capitalize ">
           what is amiphoria?
@@ -317,7 +323,6 @@ const Home = () => {
           <span className="text-[#EF64FE] ">featuring </span>music, dance,
           competitions, and{" "}
           <span className="text-[#EF64FE] ">unforgettable</span> experiences.
-
           {/* images */}
           <img
             src={plane}
@@ -338,7 +343,6 @@ const Home = () => {
       </div>
       {/* dates section */}
       <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px]">
-
         {/* first */}
         <div className="w-[50%] flex flex-col justify-between p-2">
           <div className="text-[80px] max-md:text-[32px] font-extrabold relative">
@@ -362,8 +366,8 @@ const Home = () => {
         </div>
 
         {/* second */}
-        <div className="w-[50%] flex flex-col justify-between items-end text-right">
-          <div className="text-[18px] max-md:text-[16px] font-bold relative">
+        <div className="w-[50%] flex flex-col justify-between items-end text-right p-2">
+          <div className="text-[18px] max-md:text-[14px] font-bold relative">
             Hec core area, near railway crossing, pundag , <br />
             ranchi , jharkhand 834001
             <img
@@ -374,24 +378,18 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col gap-4 ">
-            <p className="text-[18px] font-bold">follow us on</p>
+            <p className="text-[18px] max-md:text-[14px] font-bold">follow us on</p>
 
             <div className="flex gap-6 flex-wrap">
-              <div className="text-[18px] text-zinc-900 p-[8px] rounded-[100px] bg-gray-200">
-                <FaInstagram />{" "}
-              </div>
-              <div className="text-[18px] text-zinc-900 p-[8px] rounded-[100px] bg-gray-200">
-                <FaXTwitter />{" "}
-              </div>
-              <div className="text-[18px] text-zinc-900 p-[8px] rounded-[100px] bg-gray-200">
-                <FaYoutube />{" "}
-              </div>
-              <div className="text-[18px] text-zinc-900 p-[8px] rounded-[100px] bg-gray-200">
-                <FaFacebook />{" "}
-              </div>
-              <div className="text-[18px] text-zinc-900 p-[8px] rounded-[100px] bg-gray-200">
-                <FaLinkedin />{" "}
-              </div>
+              {socialLinks.map(({ icon, name }, index) => (
+                <div
+                  key={index}
+                  className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-5 max-md:h-5"
+                  title={name}
+                >
+                  {icon}
+                </div>
+              ))}
             </div>
           </div>
         </div>
