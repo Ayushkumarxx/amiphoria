@@ -8,10 +8,10 @@ const EventCard = ({ number, title, events, imageSrc }) => {
   return (
     <div className="flex flex-col mt-[100px] max-md:mt-[60px]" >
       <div className="w-full py-2.5 flex">
-        <div className="w-[50%] max-md:w-[20%] flex justify-center max-md:justify-start items-center text-white font-bold text-[18px]">
+        <div className="w-[50%] max-md:w-[10%] flex justify-center max-md:justify-start items-center text-white font-bold text-[18px]">
           {number}
         </div>
-        <div className="w-[50%] max-md:w-[80%] border-b-[2px] border-b-white flex justify-between items-center py-2 max-md:gap-2">
+        <div className="w-[50%] max-md:w-[90%] border-b-[2px] border-b-white flex justify-between items-center py-2 max-md:gap-2">
           <div className="text-white text-[18px]  font-semibold">{title}</div>
           <div className="text-zinc-200 text-[18px] max-md:text-[14px]">
             {events.map((event, index) => (
