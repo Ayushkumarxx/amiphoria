@@ -395,8 +395,10 @@ const Home = () => {
         </div>
       </div>
 
+      {/* tickets section */}
+
       <div className="bg-[#F2ECE7] py-20">
-        <div className="border-[2px] border-black h-[450px] w-full flex ">
+        <div className="border-[2px] border-black h-[450px] max-md:h-auto w-full flex  ">
           <TicketCard2 img={fest} />
           <div className="h-full w-[40%] p-6 flex flex-col items-center  border-r-[2px] border-r-black border-l-[2px] border-l-black">
             <h2 className="text-[42px] font-bold">JOIN US</h2>
