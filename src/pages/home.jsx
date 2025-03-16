@@ -135,32 +135,32 @@ const Footer = () => {
   );
 };
 
-const TicketCard2 = ({ img }) => {
+const TicketCard2 = ({ img, h, w, hidden }) => {
   return (
-    <div className="h-full w-[30%] p-8">
-      <div className="w-full h-[75%]">
-        <img
-          src={img}
-          alt=""
-          className="w-full h-full object-cover grayscale"
-        />
+    <div
+      className={`p-8 ${hidden ? "max-md:hidden" : "md:hidden"}`}
+      style={{ height: `${h}%`, width: `${w}%` }}
+    >
+      <div className="w-full h-[75%] relative overflow-hidden rounded-lg">
+        <img src={img} alt="Ticket" className="w-full h-full object-cover grayscale" />
       </div>
 
       <div className="flex justify-between items-center mt-4">
         <div className="text-[18px] font-bold w-[80%] leading-5">
           DJ NIGHT PASS <br />
-          <span className="text-[12px] font-semibold ">
+          <span className="text-[12px] font-semibold">
             Join any event of your choice to get the DJ Night Pass
           </span>
         </div>
 
-        <div className="w-[50px] h-[50px] rounded-[100px] border-[2px] border-black flex justify-center items-center text-black text-[42px]">
-          <GoArrowUpRight />{" "}
+        <div className="w-[50px] h-[50px] rounded-full border-2 border-black flex justify-center items-center text-black text-[42px]">
+          <GoArrowUpRight />
         </div>
       </div>
     </div>
   );
 };
+
 const Home = () => {
   const socialLinks = [
     { icon: <FaInstagram />, name: "Instagram" },
@@ -398,9 +398,12 @@ const Home = () => {
       {/* tickets section */}
 
       <div className="bg-[#F2ECE7] py-20">
-        <div className="border-[2px] border-black h-[450px] max-md:h-auto w-full flex  ">
-          <TicketCard2 img={fest} />
-          <div className="h-full w-[40%] p-6 flex flex-col items-center  border-r-[2px] border-r-black border-l-[2px] border-l-black">
+
+        {/* first section */}
+        <div className="border-[2px] border-black h-[450px] max-md:h-auto w-full flex  max-md:flex-col">
+          <TicketCard2 img={fest} h={"100"} w={"30"} hidden={true}/>
+          <TicketCard2 img={fest} h={"100"} w={"100"} hidden={false}/>
+          <div className="h-full w-[40%] max-md:w-full p-6 flex flex-col items-center  border-r-[2px] max-md:border-r-0 max-md:border-t-[2px]  border-black border-l-[2px] max-md:border-l-0 ">
             <h2 className="text-[42px] font-bold">JOIN US</h2>
             <p className="text-[24px] font-semibold text-center ">
               19 Mar - 2025 <br />
@@ -414,10 +417,13 @@ const Home = () => {
               students across india
             </p>
           </div>
-          <TicketCard2 img={event1} />
+      
+          <TicketCard2 img={event1} h={"100"} w={"30"} hidden={true}/>
+    
+          
         </div>
 
-        <div className="text-[152px] font-bold text-center mt-[20px]">
+        <div className="text-[152px] max-md:text-[42px] font-bold text-center mt-[20px]">
           AMIPHORIA 2K25
         </div>
       </div>
