@@ -54,13 +54,17 @@ const Events = () => {
         {/* main content */}
 
         <div className="flex flex-col mt-6  items-center">
-          <h1 className="text-[122px] max-md:text-[52px] font-extrabold text-center">CULTURAL EVENT</h1>
+          <h1 className="text-[122px] max-md:text-[52px] font-extrabold text-center">
+            CULTURAL EVENT
+          </h1>
 
           {/* date line */}
           <div className="w-[120vw] h-[60px]   flex items-center justify-between  -translate-x-10">
             {[...Array(12)].map((_, index) => (
               <div key={index} className="flex items-center ">
-                <div className="text-[46px] w-[150px] max-md:w-[50px] max-md:text-[18px] font-extrabold text-black">21</div>
+                <div className="text-[46px] w-[150px] max-md:w-[50px] max-md:text-[18px] font-extrabold text-black">
+                  21
+                </div>
                 <img src={slash} alt="" className="w-[50px] max-md:w-[25px] " />
                 <img src={slash} alt="" className="w-[50px] max-md:hidden" />
               </div>
@@ -94,32 +98,39 @@ const Events = () => {
 
       {/* Section 2 */}
       <section className="h-[105vh] w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center">
+        {/* plane img */}
         <div className="w-[150px] h-[150px] absolute top-[50px] right-[130px] rotate-[30deg]">
           <img src={plane} alt="" className="w-full h-full object-contain" />
         </div>
+
+        {/* double slash */}
+
         <div className="w-[100px] h-[100px] absolute bottom-[50px] left-[120px]  flex">
           <img src={slash} alt="" className="w-full h-full object-contain" />
           <img src={slash} alt="" className="w-full h-full object-contain" />
         </div>
 
         <div className="flex ">
-          <h1 class="text-[72px] font-bold text-outline-2 font-sans text-nowrap">
+          <h1 class="text-[72px] max-md:text-[36px] font-[500] text-outline  text-nowrap">
             Coding Events Tech Digital Fest Event Coding Debugging Memes
           </h1>
         </div>
 
+        {/* divider */}
+
         <div className="w-screen h-[1px] bg-black my-8"></div>
 
         <div className="flex ">
-          <h1 class="text-[72px]  font-bold  text-nowrap">
+          <h1 class="text-[72px] max-md:text-[36px] font-bold  text-nowrap">
             Fest Event Coding Debugging Memes Coding Events Tech Digital
           </h1>
         </div>
+        {/* divider */}
 
         <div className="w-screen h-[1px] bg-black my-8"></div>
 
-        <div className="flex relative">
-          <h1 class="text-[72px] font-bold text-outline-2 font-sans text-nowrap ">
+        <div className="flex relative ">
+          <h1 class="text-[72px] max-md:text-[36px] font-[500] text-outline  text-nowrap ">
             Tech Podcast Hackathon Coding Debugging Memes Coding Events
           </h1>
 
@@ -264,33 +275,22 @@ const Events = () => {
           >
             <div className="w-full h-[2px] bg-white"></div>
             <div className="flex justify-around text-[42px] font-semibold">
-              <div>
-                BEYOND
-              </div>
-              <div>
-                NORMAL
-              </div>
-              <div>
-                GAMING
-              </div>
+              <div>BEYOND</div>
+              <div>NORMAL</div>
+              <div>GAMING</div>
             </div>
             <div className="w-full h-[2px] bg-white"></div>
           </div>
         </div>
         <div className="w-[100vw] h-[25vh] bg-amber-300 -rotate-2 translate-y-[80px]  flex">
- 
           <div className="w-[80%]  gradient-2 py-4 flex justify-between flex-col">
             <div className="w-full h-[2px] bg-white"></div>
             <div className="flex justify-around text-[42px] font-semibold">
+              <div>ESPORT</div>
               <div>
-                ESPORT
+                <SiYoutubegaming />
               </div>
-              <div>
-                <SiYoutubegaming/>
-              </div>
-              <div>
-                2025
-              </div>
+              <div>2025</div>
             </div>
             <div className="w-full h-[2px] bg-white"></div>
           </div>
@@ -302,15 +302,9 @@ const Events = () => {
           <div className="w-[80%]  gradient-3  py-4 flex justify-between flex-col">
             <div className="w-full h-[2px] bg-white"></div>
             <div className="flex justify-around text-[42px] font-semibold">
-              <div>
-                KHELEGA
-              </div>
-              <div>
-                FREE FIRE
-              </div>
-              <div>
-                ?????
-              </div>
+              <div>KHELEGA</div>
+              <div>FREE FIRE</div>
+              <div>?????</div>
             </div>
             <div className="w-full h-[2px] bg-white"></div>
           </div>
