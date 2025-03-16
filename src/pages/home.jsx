@@ -43,26 +43,26 @@ const EventCard = ({ img, date, title }) => {
 
 const TicketCard = ({ eventTitle, eventTitle2 }) => {
   return (
-    <div className="flex p-2 h-[90%] w-[30%] max-md:w-[300px] bg-[#EFDBD0] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] shrink-0">
+    <div className="flex p-2 h-[90%] max-md:h-[80%] w-[30%] max-md:w-[250px] bg-[#EFDBD0] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] shrink-0">
       {/* Vertical Text */}
       <div className="text-[12px] bg-black text-white w-[20px] h-full flex items-center justify-center writing-mode-vertical-rl">
         JOIN THE FUN NOW
       </div>
 
       {/* Event Details */}
-      <div className="flex flex-col gap-[10px] p-4 w-[90%]">
+      <div className="flex flex-col justify-between p-4 w-[90%]">
         <div className="text-[18px] max-md:text-[12px]   font-semibold">Thrusday-Friday</div>
         <div className="text-[32px] max-md:text-[24px] leading-[20px]">
           <span className="text-outline font-sans">{eventTitle}</span>{" "}
           {eventTitle2}
         </div>
-        <div className="text-[12px] font-semibold mt-[16px]">
+        <div className="text-[12px] font-semibold mt-[16px] max-md:text-[10px]">
           Amity University Jharkhand
         </div>
 
         <div className="w-full h-[2px] bg-black"></div>
 
-        <div className="flex w-full justify-between items-center text-[12px]">
+        <div className="flex w-full justify-between items-center text-[12px] max-md:text-[10px]">
           <div>HEC CORE PUNDAG RANCHI</div>
           <div>XXIXIX</div>
         </div>
