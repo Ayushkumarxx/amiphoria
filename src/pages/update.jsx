@@ -9,11 +9,8 @@ import {
 import useNavigation from "../utils/navigation";
 import Routes from "../utils/routes";
 const Update = () => {
-
   const navigateTo = useNavigation();
 
-
-  
   return (
     <section className="w-full h-screen max-md:h-auto bg-[#EC4B1B]">
       <Navbar />
@@ -39,19 +36,31 @@ const Update = () => {
           </div>
 
           <div className="flex gap-5 mt-[30px]">
-            <div className="flex items-center gap-1 text-[18px]  w-[150px] max-md:w-[120px]  cursor-pointer" onClick={() => navigateTo(Routes.FB, true)}>
+            <div
+              className="flex items-center gap-1 text-[18px]  w-[150px] max-md:w-[120px]  cursor-pointer"
+              onClick={() => navigateTo(Routes.FB, true)}
+            >
               <FaFacebook /> Facebook
             </div>
-            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[120px] cursor-pointer" onClick={() => navigateTo(Routes.Insta, true)}>
+            <div
+              className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[120px] cursor-pointer"
+              onClick={() => navigateTo(Routes.Insta, true)}
+            >
               <FaInstagram /> Instagram
             </div>
           </div>
           <div className="flex gap-5 mt-[10px]">
-            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[120px] cursor-pointer" onClick={() => navigateTo(Routes.LinkedIn, true)}>
+            <div
+              className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[120px] cursor-pointer"
+              onClick={() => navigateTo(Routes.LinkedIn, true)}
+            >
               {" "}
               <FaLinkedin /> Linkedin
             </div>
-            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[100px] cursor-pointer" onClick={() => navigateTo(Routes.Yt, true)}>
+            <div
+              className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[100px] cursor-pointer"
+              onClick={() => navigateTo(Routes.Yt, true)}
+            >
               <FaYoutube /> Youtube
             </div>
           </div>

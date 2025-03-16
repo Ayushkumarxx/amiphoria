@@ -233,7 +233,7 @@ const Home = () => {
       <Navbar />
 
       {/* hero section */}
-      <div className="home h-[665px] max-md:h-auto max-md:pb-10 relative max-w-[1350px] mt-4 px-[10px] mx-auto ">
+      <section className="home h-[665px] max-md:h-auto max-md:pb-10 relative max-w-[1350px] mt-4 px-[10px] mx-auto ">
         {/* actress photo */}
         <div className="h-[600px] absolute right-[75px] bottom-[0px] max-md:hidden">
           <img
@@ -322,9 +322,9 @@ const Home = () => {
           <img src={spon4} alt="" className="spon_img" />
           <img src={spon5} alt="" className="spon_img" />
         </div>
-      </div>
+      </section>
       {/* events section */}
-      <div className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center  ">
+      <section className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center  ">
         {/* heading */}
         <p className="text-[16px] font-bold text-[#fff] max-md:text-[12px] ">
           Amiphoria Events{" "}
@@ -368,10 +368,10 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* what is amiphoria  */}
-      <div className="nt-whatfor w-full h-[700px] flex flex-col justify-center items-center bg-[#B4FF52] text-center p-2.5">
+      <section className="nt-whatfor w-full h-[700px] flex flex-col justify-center items-center bg-[#B4FF52] text-center p-2.5">
         {/* title */}
         <div className="text-[18px] max-md:text-[14px] font-bold capitalize ">
           what is amiphoria?
@@ -400,10 +400,10 @@ const Home = () => {
             className="absolute bottom-[-100px] max-md:bottom-[-80px] right-[0px] max-md:right-[10%] w-[120px] rotate-[10deg] max-md:w-[60px]"
           />
         </div>
-      </div>
+      </section>
 
       {/* dates section */}
-      <div className="bg-[#151515] text-white">
+      <section className="bg-[#151515] text-white">
         <div className="nt-dates flex justify-between py-[150px] max-w-[1050px]  mx-auto h-[700px] ">
           {/* first */}
           <div className="w-[50%] flex flex-col justify-between p-2">
@@ -431,7 +431,7 @@ const Home = () => {
           <div className="w-[50%] flex flex-col justify-between items-end text-right p-2">
             <div className="text-[18px] max-md:text-[14px] font-bold relative">
               Hec core area, near railway crossing, pundag , <br />
-              ranchi , jharkhand 834001
+              ranchi , jharkhand 834004
               <img
                 src={sparkle}
                 alt=""
@@ -459,9 +459,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       {/* divider section */}
-      <div className="w-full h-[850px]  flex flex-col justify-between py-20   ">
+      <section className="w-full h-[850px]  flex flex-col justify-between py-20   ">
         <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
           <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
@@ -482,11 +482,11 @@ const Home = () => {
           <TicketCard eventTitle={"ESPORT"} eventTitle2={"TEAM"} />
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
         </div>
-      </div>
+      </section>
 
       {/* tickets section */}
 
-      <div className="bg-[#F2ECE7] py-20 ">
+      <section className="bg-[#F2ECE7] py-20 ">
         {/* first section */}
         <div className="border-[2px] border-black h-[450px] max-md:h-auto w-full flex  max-md:flex-col">
           <TicketCard2 img={fest} h={"100"} w={"30"} hidden={true} />
@@ -512,7 +512,7 @@ const Home = () => {
         <div className="text-[152px] max-md:text-[42px] font-bold text-center mt-[20px]">
           AMIPHORIA 2K25
         </div>
-      </div>
+      </section>
 
       <Footer />
     </div>

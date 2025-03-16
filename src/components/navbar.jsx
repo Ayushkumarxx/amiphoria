@@ -23,7 +23,10 @@ const Navbar = () => {
   return (
     <nav className="flex max-w-[1350px] mx-auto justify-between items-center p-4 h-[75px] relative">
       {/* Logo */}
-      <div className="h-full w-[120px]">
+      <div
+        className="h-full w-[120px] cursor-pointer"
+        onClick={() => navigateTo(Routes.Home)}
+      >
         <img
           src={logo}
           alt="Logo"
@@ -55,7 +58,10 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <button className="md:hidden text-2xl z-40" onClick={toggleMenu}>
+      <button
+        className="md:hidden text-2xl z-40 cursor-pointer"
+        onClick={toggleMenu}
+      >
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
@@ -66,7 +72,7 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-lg flex flex-col items-center justify-center gap-8 z-50"
+            className="fixed inset-0 bg-black/60 backdrop-blur-lg flex flex-col items-center justify-center gap-8 z-30"
           >
             {navLinks.map(({ name, path }, index) => (
               <motion.div

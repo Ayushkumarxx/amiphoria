@@ -7,9 +7,8 @@ import useNavigation from "../utils/navigation";
 import Routes from "../utils/routes";
 
 const EventCard = ({ number, title, events, imageSrc }) => {
- 
   return (
-    <div className="flex flex-col mt-[100px] max-md:mt-[60px]" >
+    <div className="flex flex-col mt-[100px] max-md:mt-[60px]">
       <div className="w-full py-2.5 flex">
         <div className="w-[50%] max-md:w-[10%] flex justify-center max-md:justify-start items-center text-white font-bold text-[18px]">
           {number}
@@ -39,15 +38,22 @@ const Register = () => {
   return (
     <>
       <div className="w-full h-screen max-md:h-auto bg-[#E5DDD4]  ">
-
         {/* nav head */}
         <div className="max-w-[1350px] mx-auto  h-[10%] max-md:h-[75px]   flex justify-between items-center border-b-[1px] border-b-black px-2.5">
-          <div className="text-[24px] cursor-pointer " onClick={() => navigateTo(Routes.Home)}>Amiphoria</div>
+          <div
+            className="text-[24px] cursor-pointer "
+            onClick={() => navigateTo(Routes.Home)}
+          >
+            Amiphoria
+          </div>
           <div className="flex gap-[8px] flex-col">
             <div className="w-[25px] h-[2px] bg-black"></div>
             <div className="w-[25px] h-[2px] bg-black"></div>
           </div>
-          <div className="text-[16px] px-[30px] py-[8px] bg-black text-white cursor-pointer hover:outline-[1px] hover:outline-black hover:bg-transparent hover:text-black transition-all duration-200 ease-in" onClick={() => navigateTo(Routes.Form,true)}>
+          <div
+            className="text-[16px] px-[30px] py-[8px] bg-black text-white cursor-pointer hover:outline-[1px] hover:outline-black hover:bg-transparent hover:text-black transition-all duration-200 ease-in"
+            onClick={() => navigateTo(Routes.Form, true)}
+          >
             Register
           </div>
         </div>
@@ -55,10 +61,8 @@ const Register = () => {
         {/* first section */}
 
         <div className="max-w-[1350px] mx-auto flex max-md:flex-col justify-between  h-[90%] max-md:h-auto py-2.5">
-
           {/* first section */}
           <div className="w-[45%] max-md:w-full max-md:px-2.5 flex flex-col justify-around ">
-
             {/* heading */}
             <div className="flex w-full justify-between items-end px-[10px]">
               <div className="flex flex-col gap-[10px]">
@@ -210,8 +214,7 @@ const Register = () => {
         </div>
       </div>
 
-
-       {/* third section */}
+      {/* third section */}
       <div className="bg-[#E5DDC9] py-[20px] ">
         <div className="max-w-[1250px] mx-auto mt-[200px] p-2.5">
           <div className="text-[122px] max-md:text-[46px] font-semibold leading-none">
@@ -221,7 +224,10 @@ const Register = () => {
             <div className="text-[52px] max-md:text-[18px] font-semibold">
               SELECT AN EVENT AND <br /> JOIN NOW
             </div>
-            <div className="w-[80px] max-md:w-[60px] h-[80px] max-md:h-[60px] rounded-[100px] bg-black flex justify-center items-center text-white text-[42px] max-md:text-[32px] cursor-pointer hover:bg-transparent hover:text-black hover:outline-1 hover:outline-black transition-all duration-200 ease-in-out" onClick={() => navigateTo(Routes.Form,true)}>
+            <div
+              className="w-[80px] max-md:w-[60px] h-[80px] max-md:h-[60px] rounded-[100px] bg-black flex justify-center items-center text-white text-[42px] max-md:text-[32px] cursor-pointer hover:bg-transparent hover:text-black hover:outline-1 hover:outline-black transition-all duration-200 ease-in-out"
+              onClick={() => navigateTo(Routes.Form, true)}
+            >
               <GoArrowUpRight />{" "}
             </div>
           </div>

@@ -5,6 +5,8 @@ import { MdOutlineElectricBolt } from "react-icons/md";
 import { SiYoutubegaming } from "react-icons/si";
 import useNavigation from "../utils/navigation";
 import Routes from "../utils/routes";
+
+//for section 1
 function ImageCard({ name, imageUrl }) {
   return (
     <div className="flex flex-col items-center max-md:mb-2.5">
@@ -17,6 +19,8 @@ function ImageCard({ name, imageUrl }) {
     </div>
   );
 }
+
+//for section 4
 const EventSection = ({ title, image, text, reverse }) => (
   <div className={`flex w-full h-[30vh] ${reverse ? "flex-row-reverse" : ""}`}>
     <div className="w-[50%] h-full flex justify-center items-center text-[62px] max-md:text-[26px] p-4 font-semibold">
@@ -276,7 +280,10 @@ const Events = () => {
             </div>
           ))}
 
-          <div className="p-2 border-[1px] border-black rounded-[100px] cursor-pointer  hover:bg-black hover:text-white" onClick={() => navigateTo(Routes.Register)}>
+          <div
+            className="p-2 border-[1px] border-black rounded-[100px] cursor-pointer  hover:bg-black hover:text-white"
+            onClick={() => navigateTo(Routes.Register)}
+          >
             Get Registered
           </div>
         </div>
@@ -294,7 +301,12 @@ const Events = () => {
             {" "}
             <MdOutlineElectricBolt /> Esport Event
           </div>
-          <div className="cursor-pointer hover:scale-105" onClick={() => navigateTo(Routes.Register)}>Get Registered</div>
+          <div
+            className="cursor-pointer hover:scale-105"
+            onClick={() => navigateTo(Routes.Register)}
+          >
+            Get Registered
+          </div>
         </div>
 
         {/* first */}
