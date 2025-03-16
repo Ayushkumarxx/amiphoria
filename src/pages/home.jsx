@@ -27,11 +27,11 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const EventCard = ({ img, date, title }) => {
   return (
-    <div className="flex flex-col w-[280px] max-md:w-[80%] h-[400px] overflow-hidden bg-[#EF64FE] shadow-[0_0_0_2px_#EF64FE] ">
+    <div className="flex flex-col w-[280px] max-md:w-[80%] h-[400px] max-md:h-[300px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] ">
       <img
         src={img}
         alt=""
-        className="w-full h-[85%] object-cover grayscale-100"
+        className="w-full h-[85%] max-md:h-[65%] object-cover grayscale-100"
       />
       <div className="w-full flex flex-col p-4 justify-between">
         <p className="text-[16px] max-md:text-[14px] font-bold text-zinc-200 mt-4">{date}</p>
@@ -251,7 +251,7 @@ const Home = () => {
       </div>
       {/* events section */}
 
-      <div className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center ">
+      <div className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center overflow-x-hidden ">
 
         {/* heading */}
         <p className="text-[16px] font-bold text-[#fff] max-md:text-[12px] ">Amiphoria Events </p>
@@ -292,7 +292,7 @@ const Home = () => {
         </div>
       </div>
       {/* divider section */}
-      <div className="w-full h-[850px]  flex flex-col justify-between py-20">
+      <div className="w-full h-[850px]  flex flex-col justify-between py-20  overflow-x-hidden">
         <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
           <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
