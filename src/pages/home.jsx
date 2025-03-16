@@ -237,7 +237,7 @@ const Home = () => {
           />
         </div>
         {/* head text */}
-        <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  ">
+        <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  max-md:mt-4">
           <div className="text-[162px] max-md:text-[56px] font-extrabold relative ">
             Amiphoria{" "}
             <span className="absolute text-[24px] max-md:text-[12px] left-[15px] top-[0px]">
@@ -251,7 +251,7 @@ const Home = () => {
 
         {/* details */}
 
-        <div className="scoialNText flex justify-between items-center max-md:mt-5">
+        <div className="scoialNText flex justify-between items-center max-md:mt-6.5">
           <div className="w-[50%] max-md:w-[85%]">
             <p className="text-[18px] max-md:text-[14px] ">
               Get ready for an electrifying blend of music, dance, fashion, and
@@ -283,15 +283,15 @@ const Home = () => {
 
           <div className="flex flex-col gap-10">
             <div  className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.Insta, true)}>
-              <FaInstagram className="text-3xl" />{" "}
+              <FaInstagram className="text-3xl max-md:text-[24px]" />{" "}
             </div>
             <div className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.Yt, true)}>
               {" "}
-              <FaYoutube className="text-3xl" />
+              <FaYoutube className="text-3xl max-md:text-[24px]" />
             </div>
             <div className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.FB, true)}>
               {" "}
-              <FaFacebook className="text-3xl" />
+              <FaFacebook className="text-3xl max-md:text-[24px]" />
             </div>
           </div>
         </div>
@@ -396,7 +396,7 @@ const Home = () => {
             <img
               src={circle}
               alt=""
-              className="absolute top-[-250px] max-md:top-[-100px]  left-[-100px] max-md:left-[-10px] h-[600px] max-md:h-[250px] "
+              className="absolute top-[-250px] max-md:top-[-100px]  left-[-100px]  h-[600px] max-md:hidden"
             />
           </div>
 
@@ -445,7 +445,7 @@ const Home = () => {
       </div>
 
       {/* divider section */}
-      <div className="w-full h-[850px]  flex flex-col justify-between py-20  ">
+      <div className="w-full h-[850px]  flex flex-col justify-between py-20 bg-[#F2ECE7]  ">
         <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
           <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
