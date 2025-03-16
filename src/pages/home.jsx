@@ -27,15 +27,15 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const EventCard = ({ img, date, title }) => {
   return (
-    <div className="flex flex-col w-[280px] h-[400px] overflow-hidden bg-[#EF64FE] shadow-[0_0_0_2px_#EF64FE] ">
+    <div className="flex flex-col w-[280px] max-md:w-[80%] h-[400px] overflow-hidden bg-[#EF64FE] shadow-[0_0_0_2px_#EF64FE] ">
       <img
         src={img}
         alt=""
         className="w-full h-[85%] object-cover grayscale-100"
       />
       <div className="w-full flex flex-col p-4 justify-between">
-        <p className="text-[16px] font-bold text-zinc-200 mt-4">{date}</p>
-        <p className="text-[22px] font-bold text-[#fff]">{title}</p>
+        <p className="text-[16px] max-md:text-[14px] font-bold text-zinc-200 mt-4">{date}</p>
+        <p className="text-[22px] max-md:text=[18px] font-bold text-[#fff]">{title}</p>
       </div>
     </div>
   );
@@ -252,12 +252,16 @@ const Home = () => {
       {/* events section */}
 
       <div className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center ">
-        <p className="text-[16px] font-bold text-[#fff]">Amiphoria Events </p>
-        <h2 className="text-[62px] font-extrabold text-[#fff] mt-2">
+
+        {/* heading */}
+        <p className="text-[16px] font-bold text-[#fff] max-md:text-[12px] ">Amiphoria Events </p>
+
+        {/* super head */}
+        <h2 className="text-[62px] max-md:text-[32px] font-extrabold text-[#fff] mt-2">
           Events We <span className="text-[#EF64FE]">Organize</span>
         </h2>
 
-        <div className="flex justify-between mt-6 w-[80%]">
+        <div className="flex max-md:flex-col max-md:items-center max-md:gap-5 justify-between mt-6 w-[80%] max-md:w-full">
           <EventCard
             img={event1}
             date="19 Mar 2025"
@@ -268,18 +272,20 @@ const Home = () => {
           <EventCard img={event4} date="21 Mar 2025" title="Tech Fest" />
         </div>
 
-        <div className="w-[120vw] h-[60px] bg-[#EF64FE] mt-20 flex items-center justify-between rotate-2  -translate-x-10 origin-center">
+        {/* strips */}
+
+        <div className="w-[120vw] h-[60px] max-md:h-[50px] bg-[#EF64FE] mt-20 flex items-center justify-between rotate-2  -translate-x-10 origin-center gap-[30px]">
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
-              <div className="text-[24px] font-bold text-[#fff]">Join</div>
+              <div className="text-[24px] max-md:text-[18px]  font-bold text-[#fff]">Join</div>
               <img src={sparkle} alt="" className="w-[40px]" />
             </div>
           ))}
         </div>
-        <div className="w-[120vw] h-[60px] bg-[#A9EB09] mt-4 flex items-center justify-between -rotate-4 origin-left translate-x-10">
+        <div className="w-[120vw] h-[60px]  max-md:h-[50px] bg-[#A9EB09] mt-4 flex items-center justify-between -rotate-4 origin-left translate-x-10 gap-[30px]">
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
-              <div className="text-[24px] font-bold text-[#fff]">Fast</div>
+              <div className="text-[24px] max-md:text-[18px] font-bold text-[#fff]">Fast</div>
               <img src={sparkle} alt="" className="w-[40px] " />
             </div>
           ))}
