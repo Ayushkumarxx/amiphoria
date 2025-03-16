@@ -7,6 +7,14 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 const Update = () => {
+
+  const socialLinks = [
+    { icon: <FaFacebook />, name: "Facebook" },
+    { icon: <FaInstagram />, name: "Instagram" },
+    { icon: <FaLinkedin />, name: "Linkedin" },
+    { icon: <FaYoutube />, name: "Youtube" },
+  ];
+  
   return (
     <section className="w-full h-screen max-md:h-auto bg-[#EC4B1B]">
       <Navbar />
@@ -14,20 +22,18 @@ const Update = () => {
 
       <div className="max-w-[1350px] mx-auto py-[10px] px-[10px] h-[90vh] max-md:h-auto flex max-md:flex-col ">
         {/* first section */}
-        <div className="w-[50%] max-md:w-full h-full  flex flex-col py-14 justify-between">
-          <div className="text-[112px] max-md:text-[50px] underline underline-offset-[32px] max-md:underline-offset-[16px] ">
-            Latest
-          </div>
-
-          <div className="text-[112px] max-md:text-[50px]  underline underline-offset-[32px] max-md:underline-offset-[16px] ">
-            Updates
-          </div>
-          <div className="text-[112px] max-md:text-[50px]  underline underline-offset-[32px] max-md:underline-offset-[16px] ">
-            Amiphoria
-          </div>
+        <div className="w-[50%] max-md:w-full h-full flex flex-col py-14 justify-between">
+          {["Latest", "Updates", "Amiphoria"].map((text, index) => (
+            <div
+              key={index}
+              className="text-[112px] max-md:text-[50px] underline underline-offset-[32px] max-md:underline-offset-[16px]"
+            >
+              {text}
+            </div>
+          ))}
         </div>
 
-       {/* second section  */}
+        {/* second section  */}
         <div className="w-[50%] max-md:w-full h-full  flex flex-col py-14 px-[10%] max-md:px-[0%] ">
           <div className="text-[18px] font-semibold  ">
             amiphoria@amity.rnc.in

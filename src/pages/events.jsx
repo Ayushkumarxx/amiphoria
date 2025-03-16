@@ -6,11 +6,11 @@ import { SiYoutubegaming } from "react-icons/si";
 function ImageCard({ name, imageUrl }) {
   return (
     <div className="flex flex-col items-center">
-      <p className="text-lg font-semibold">{name}</p>
+      <p className="text-lg max-md:text-[10px] font-semibold">{name}</p>
       <img
         src={imageUrl}
         alt={name}
-        className="w-48 h-60 object-cover rounded-lg shadow-md grayscale"
+        className="w-48 max-md:w-[50px] h-60 max-md:h-[100px] object-cover rounded-lg shadow-md grayscale"
       />
     </div>
   );
@@ -48,44 +48,52 @@ const Events = () => {
   return (
     <div className="relative h-screen w-full overflow-y-auto overflow-x-hidden">
       {/* Section 1 */}
-      <div className="h-screen w-full bg-[#FEEE01] sticky top-0 z-10 ">
+      <section className="h-screen w-full bg-[#FEEE01] sticky top-0 z-10 ">
         <Navbar />
 
+        {/* main content */}
+
         <div className="flex flex-col mt-6  items-center">
-          <h1 className="text-[122px] font-extrabold">CULTURAL EVENT</h1>
+          <h1 className="text-[122px] max-md:text-[42px] font-extrabold">CULTURAL EVENT</h1>
+
+          {/* date line */}
           <div className="w-[120vw] h-[60px]   flex items-center justify-between  -translate-x-10">
             {[...Array(12)].map((_, index) => (
               <div key={index} className="flex items-center ">
-                <div className="text-[46px] font-extrabold text-black">21</div>
-                <img src={slash} alt="" className="w-[50px] " />
-                <img src={slash} alt="" className="w-[50px] " />
+                <div className="text-[46px] max-md:text-[18px] font-extrabold text-black">21</div>
+                <img src={slash} alt="" className="w-[50px] max-md:w-[25px] " />
+                <img src={slash} alt="" className="w-[50px] max-md:hidden" />
               </div>
             ))}
           </div>
 
-          <h1 class="text-6xl font-bold text-outline mt-10 font-sans">
+          <h1 class="text-6xl max-md:text-2xl font-bold text-outline max-md:text-outline-2 mt-10 font-sans">
             TAKE PART
           </h1>
         </div>
 
-        <div className="flex justify-between mt-[50px] items-center text-2xl font-bold">
-          <div className="w-[30%] h-[2px] bg-black"></div>
+        {/* divider */}
+
+        <div className="flex justify-between mt-[50px] items-center text-2xl  max-md:text-[16px] font-bold">
+          <div className="w-[30%] max-md:w-[15%] h-[2px] bg-black"></div>
           <div className="text-[#504D00]">WEDNESDAY</div>
           <div className="underline">FRIDAY </div>
           <div className="text-[#504D00]">THRUSDAY </div>
 
-          <div className="w-[30%] h-[2px] bg-black"></div>
+          <div className="w-[30%]  max-md:w-[15%] h-[2px] bg-black"></div>
         </div>
 
-        <div className="flex justify-between mt-[10px] items-center px-[50px]">
+        {/* images card */}
+
+        <div className="flex justify-between mt-[10px] items-center px-[50px] max-md:px-[10px]">
           {Culturalimages.map((item, index) => (
             <ImageCard key={index} name={item.name} imageUrl={item.imageUrl} />
           ))}
         </div>
-      </div>
+      </section>
 
       {/* Section 2 */}
-      <div className="h-[105vh] w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center">
+      <section className="h-[105vh] w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center">
         <div className="w-[150px] h-[150px] absolute top-[50px] right-[130px] rotate-[30deg]">
           <img src={plane} alt="" className="w-full h-full object-contain" />
         </div>
@@ -129,10 +137,10 @@ const Events = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Section 3 */}
-      <div className="h-[110vh] w-full bg-[#F24638] sticky top-0 z-30 flex flex-col justify-between py-10">
+      <section className="h-[110vh] w-full bg-[#F24638] sticky top-0 z-30 flex flex-col justify-between py-10">
         <div className="flex w-full justify-between items-center  text-white font-semibold px-10 ">
           <div className="flex items-center gap-2">
             {" "}
@@ -166,10 +174,10 @@ const Events = () => {
         </div>
 
         <div className="h-[5vh]"></div>
-      </div>
+      </section>
 
       {/* Section 4 */}
-      <div className="h-[110vh] w-full bg-[#DEDEDE] sticky top-0 z-40 ">
+      <section className="h-[110vh] w-full bg-[#DEDEDE] sticky top-0 z-40 ">
         <div className="flex w-full h-[10vh] justify-between items-center  text-black font-semibold px-10 ">
           <div className="flex items-center gap-2">
             {" "}
@@ -237,10 +245,10 @@ const Events = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* section 5 */}
-      <div className="h-[100vh] w-full bg-black sticky top-0 z-50  py-10">
+      <section className="h-[100vh] w-full bg-black sticky top-0 z-50  py-10">
         <div className="flex w-full justify-between items-center  text-white font-semibold px-10 ">
           <div className="flex items-center gap-2">
             {" "}
@@ -307,7 +315,7 @@ const Events = () => {
             <div className="w-full h-[2px] bg-white"></div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
