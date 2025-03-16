@@ -97,7 +97,7 @@ const Events = () => {
       </section>
 
       {/* Section 2 */}
-      <section className="h-[105vh] w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center ">
+      <section className="h-[105vh] max-md:h-screen w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center ">
         {/* plane img */}
         <div className="w-[150px] h-[150px] max-md:w-[100px] max-md:h-[100px] absolute top-[50px] max-md:top-[120px] right-[130px] max-md:right-[80px] rotate-[30deg]">
           <img src={plane} alt="" className="w-full h-full object-contain" />
