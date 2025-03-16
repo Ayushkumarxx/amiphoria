@@ -70,7 +70,7 @@ const Register = () => {
 
             {/* <div className="w-full h-[2px] bg-black mt-[20px]"></div> */}
 
-            <div className="flex flex-col gap-[10px] w-full  h-[200px] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] p-6 max-md:mt-[40px]">
+            <div className="flex flex-col gap-[10px] w-full max-md:w-[95%] max-md:mx-auto  h-[200px] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] p-6 max-md:mt-[40px]">
               <div className="flex h-[50%] w-full p-2 justify-between items-center text-[24px] max-md:text-[16px]  ">
                 <div className="flex gap-2  items-center">
                   <HiSparkles />
@@ -105,7 +105,7 @@ const Register = () => {
                 ASAP !
               </span>
             </div>
-            <div className="w-[50%] h-[60%] max-md:w-[90%] ">
+            <div className="w-[50%] h-[60%] max-md:w-[100%] ">
               <img
                 src={fest}
                 alt=""
