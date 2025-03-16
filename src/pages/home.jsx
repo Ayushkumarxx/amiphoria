@@ -338,41 +338,45 @@ const Home = () => {
       </div>
       {/* dates section */}
       <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px]">
-        <div className="w-[50%] flex flex-col justify-between">
-          <div className="text-[80px] font-extrabold relative">
+
+        {/* first */}
+        <div className="w-[50%] flex flex-col justify-between p-2">
+          <div className="text-[80px] max-md:text-[32px] font-extrabold relative">
             19 Mar
             <img
               src={circle}
               alt=""
-              className="absolute top-[-250px] left-[-100px] h-[600px]"
+              className="absolute top-[-250px] left-[-100px]  h-[600px]"
             />
           </div>
 
-          <div className="text-[22px] font-bold relative">
+          <div className="text-[22px] max-md:text-[16px] font-bold relative">
             At Amity <br />
             University Jharkhand
             <img
               src={king}
               alt=""
-              className="absolute top-[-50px] left-[-100px] h-[50px] rotate-[-30deg]"
+              className="absolute top-[-50px] max-md:top-[-60px] left-[-100px] max-md:left-[-10px] h-[50px] rotate-[-30deg]"
             />
           </div>
         </div>
+
+        {/* second */}
         <div className="w-[50%] flex flex-col justify-between items-end text-right">
-          <div className="text-[18px] font-bold relative">
+          <div className="text-[18px] max-md:text-[16px] font-bold relative">
             Hec core area, near railway crossing, pundag , <br />
             ranchi , jharkhand 834001
             <img
               src={sparkle}
               alt=""
-              className="absolute top-[-50px] right-[-100px] h-[50px] rotate-[30deg]"
+              className="absolute top-[-50px] right-[-100px] max-md:right-[-10px] h-[50px] rotate-[30deg]"
             />
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 ">
             <p className="text-[18px] font-bold">follow us on</p>
 
-            <div className="flex gap-6">
+            <div className="flex gap-6 flex-wrap">
               <div className="text-[18px] text-zinc-900 p-[8px] rounded-[100px] bg-gray-200">
                 <FaInstagram />{" "}
               </div>
