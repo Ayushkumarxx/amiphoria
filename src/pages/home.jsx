@@ -164,7 +164,7 @@ const TicketCard2 = ({ img }) => {
 const Home = () => {
   const socialLinks = [
     { icon: <FaInstagram />, name: "Instagram" },
-    { icon: <FaXTwitter />, name: "Twitter" },
+    // { icon: <FaXTwitter />, name: "Twitter" },
     { icon: <FaYoutube />, name: "YouTube" },
     { icon: <FaFacebook />, name: "Facebook" },
     { icon: <FaLinkedin />, name: "LinkedIn" },
@@ -350,7 +350,7 @@ const Home = () => {
             <img
               src={circle}
               alt=""
-              className="absolute top-[-250px] left-[-100px]  h-[600px]"
+              className="absolute top-[-250px] max-md:top-[-80px]  left-[-100px] max-md:left-[-40px] h-[600px] max-md:h-[200px] "
             />
           </div>
 
