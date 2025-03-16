@@ -154,7 +154,9 @@ const Events = () => {
 
       {/* Section 3 */}
       <section className="h-[110vh] w-full bg-[#F24638] sticky top-0 z-30 flex flex-col justify-between py-10">
-        <div className="flex w-full justify-between items-center  text-white font-semibold px-10 ">
+
+        {/* header */}
+        <div className="flex w-full justify-between items-center  text-white font-semibold px-10 max-md:px-2 ">
           <div className="flex items-center gap-2">
             {" "}
             <MdOutlineElectricBolt /> Acedmic Event
@@ -162,25 +164,29 @@ const Events = () => {
           <div>Get Registered</div>
         </div>
 
+        {/* first section */}
+
         <div className="flex justify-between items-start text-white ">
-          <div className="text-7xl font-bold">
+          <div className="text-7xl max-md:text-3xl font-bold">
             ONE <br />
             CHANCE
           </div>
-          <div className="text-zinc-900 -rotate-90 text-[16px]">
+          <div className="text-zinc-900 -rotate-90 text-[16px] max-md:text-[12px]">
             CINEMA <br />
             ART <br /> DESIGN <br /> COMMUNICATION
           </div>
-          <div className="text-7xl font-bold text-[#E8A7A3]">MINIMAL</div>
-          <div className="text-7xl font-bold">FEES</div>
+          <div className="text-7xl max-md:text-3xl font-bold text-[#E8A7A3] ">MINIMAL</div>
+          <div className="text-7xl max-md:text-3xl font-bold">FEES</div>
         </div>
-        <div className="flex justify-between items-end text-white ">
-          <div className="text-7xl font-bold">DEBATE.</div>
 
-          <div className="text-[16px] text-zinc-900 ">
+        {/* second section */}
+        <div className="flex justify-between items-end text-white ">
+          <div className="text-7xl max-md:text-3xl font-bold">DEBATE.</div>
+
+          <div className="text-[16px] max-md:text-[12px] text-zinc-900 ">
             AMITY-UNIVERSITY-JHARKHAND
           </div>
-          <div className="text-7xl font-bold text-right">
+          <div className="text-7xl max-md:text-3xl font-bold text-right">
             <span className="text-[#F78939]">CINEMA.</span> ART. <br />
             PANCHAYAT.
           </div>
