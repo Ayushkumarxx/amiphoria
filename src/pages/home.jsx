@@ -178,18 +178,20 @@ const Home = () => {
         </div>
         {/* head text */}
         <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  ">
-          <div className="text-[162px] max-md:text-[52px] font-extrabold relative">
+          <div className="text-[162px] max-md:text-[62px] font-extrabold relative ">
             Amiphoria{" "}
             <span className="absolute text-[24px] max-md:text-[12px] left-[15px] top-[0px]">
               Mar 19-21/25
             </span>
           </div>
-          <div className="text-[162px] max-md:text-[52px] font-extrabold">
+          <div className="text-[162px] max-md:text-[62px] font-extrabold max-md:leading-none">
             2K24
           </div>
         </div>
 
-        <div className="scoialNText flex justify-between items-center">
+        {/* details */}
+
+        <div className="scoialNText flex justify-between items-center max-md:mt-2.5">
           <div className="w-[50%] max-md:w-[80%]">
             <p className="text-[18px] max-md:text-[14px] ">
               Get ready for an electrifying blend of music, dance, fashion, and
@@ -210,6 +212,8 @@ const Home = () => {
               </button>
             </div>
           </div>
+
+          {/* socials */}
 
           <div className="flex flex-col gap-10">
             <div>
