@@ -57,7 +57,7 @@ const TicketCard = ({ eventTitle, eventTitle2 }) => {
   const navigateTo = useNavigation();
   return (
     <div
-      className="flex p-2 h-[90%] max-md:h-[80%] w-[30%] max-md:w-[250px] bg-[#EFDBD0] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] shrink-0 cursor-pointer hover:scale-102 transition-all duration-200 ease-in-out"
+      className="flex p-2 h-[90%] max-md:h-[80%] w-[30%] max-md:w-[250px] bg-[#F2ECE7] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] shrink-0 cursor-pointer hover:scale-102 transition-all duration-200 ease-in-out"
       onClick={() => navigateTo(Routes.Register)}
     >
       {/* Vertical Text */}
@@ -71,7 +71,7 @@ const TicketCard = ({ eventTitle, eventTitle2 }) => {
           Thrusday-Friday
         </div>
         <div className="text-[32px] max-md:text-[24px] leading-[20px]">
-          <span className="text-outline font-sans">{eventTitle}</span>{" "}
+          <span className="text-outline font-semibold">{eventTitle}</span>{" "}
           {eventTitle2}
         </div>
         <div className="text-[12px] font-semibold mt-[16px] max-md:text-[10px]">
