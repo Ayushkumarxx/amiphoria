@@ -3,6 +3,8 @@ import { Navbar } from "../components/index";
 import { IoSparklesSharp } from "react-icons/io5";
 import { team1, team2, team3, team4 } from "../assets/index";
 
+
+// team members cards
 const teamMembers = [
   { name: "Ayush", role: "coder", image: team1 },
   { name: "Praveer", role: "presenter", image: team2 },
@@ -21,8 +23,8 @@ const TeamSection = () => {
             className="w-full h-[80%] object-cover grayscale-100"
           />
           <div className="w-full flex flex-col p-2 justify-between items-end">
-            <p className="text-[16px] max-md-text-[12px] font-bold text-black mt-2 max-md:mt-1">{member.role}</p>
-            <p className="text-[22px] max-md-text-[16px] font-bold text-black">{member.name}</p>
+            <p className="text-[16px] max-md:text-[14px] font-bold text-black mt-2 max-md:mt-1">{member.role}</p>
+            <p className="text-[22px] max-md:text-[18px] font-bold text-black">{member.name}</p>
           </div>
         </div>
       ))}

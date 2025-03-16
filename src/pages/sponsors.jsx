@@ -4,7 +4,7 @@ import { heart, spon1, spon2, spon3, spon4, spon5 } from "../assets";
 
 const LogoDiv = ({ spon }) => {
   return (
-    <div className="w-[200px] h-[150px] rounded-[8px] overflow-hidden bg-[#E3DBD7]">
+    <div className="w-[160px] h-[140px] rounded-[8px] overflow-hidden bg-[#E3DBD7]">
       <img
         src={spon}
         alt=""
@@ -22,23 +22,24 @@ const Sponsors = () => {
         {/* Left Fixed Section */}
         <div className="w-1/2 max-md:w-full h-full overflow-y-hidden p-4 flex ">
           <div className="flex w-[20%] flex-col justify-around items-start ">
-            <div className="h-[80%] w-0.5 bg-[#A9EB09]">
-            </div>
+            <div className="h-[80%] w-0.5 bg-[#A9EB09]"></div>
             <img src={heart} alt="" className="w-[30px] " />
-
           </div>
           <div className="text-7xl max-md:text-3xl font-extrabold leading-normal">
-            <h2>Sponsors</h2>
-            <h2>Sponsors</h2>
-            <h2>Sponsors</h2>
-            <h2 className="text-[#A9EB09]">Sponsors</h2>
-            <h2>Sponsors</h2>
-            <h2>Sponsors</h2>
-            <h2>Sponsors</h2>
-            <h2>Sponsors</h2>
-            <h2>Sponsors</h2>
-            <h2>Sponsors</h2>
-            <h2>Sponsors</h2>
+            {Array(5)
+              .fill("Sponsors")
+              .map((text, index) => (
+                <h2 key={index} className={index === 3 ? "text-[#A9EB09]" : ""}>
+                  {text}
+                </h2>
+              ))}
+            <div className="hidden md:block">
+              {Array(5)
+                .fill("Sponsors")
+                .map((text, index) => (
+                  <h2 key={index + 5}>{text}</h2>
+                ))}
+            </div>
           </div>
         </div>
 
