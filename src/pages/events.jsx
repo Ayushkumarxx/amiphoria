@@ -282,7 +282,7 @@ const Events = () => {
         </div>
 
         {/* first */}
-        <div className="w-[100vw] h-[25vh] max-md:h-[15vh]  rotate-2 translate-y-[80px] flex">
+        <div className="w-[100vw] h-[25vh] max-md:h-[20vh]  rotate-2 translate-y-[80px] flex">
           <div className="w-[20%] pattern-1"></div>
           <div
             className="w-[80%]   gradient-1  py-4  flex justify-between flex-col
@@ -299,7 +299,7 @@ const Events = () => {
         </div>
 
         {/* second */}
-        <div className="w-[100vw] h-[25vh] max-md:h-[15vh] bg-amber-300 -rotate-2 translate-y-[80px]  flex">
+        <div className="w-[100vw] h-[25vh] max-md:h-[20vh] bg-amber-300 -rotate-2 translate-y-[80px]  flex">
           <div className="w-[80%]  gradient-2 py-4 flex justify-between flex-col">
             <div className="w-full h-[2px] bg-white"></div>
             <div className="flex justify-around text-[42px] max-md:text-[18px] font-semibold">
@@ -315,7 +315,7 @@ const Events = () => {
         </div>
         {/* third */}
         
-        <div className="w-[100vw] h-[25vh] max-md:h-[15vh] bg-amber-500 rotate-2 translate-y-[80px]  flex">
+        <div className="w-[100vw] h-[25vh] max-md:h-[20vh] bg-amber-500 rotate-2 translate-y-[80px]  flex">
           <div className="w-[20%] pattern-1"></div>
           <div className="w-[80%]  gradient-3  py-4 flex justify-between flex-col">
             <div className="w-full h-[2px] bg-white"></div>
