@@ -345,12 +345,12 @@ const Home = () => {
       <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px]">
         {/* first */}
         <div className="w-[50%] flex flex-col justify-between p-2">
-          <div className="text-[80px] max-md:text-[32px] font-extrabold relative">
+          <div className="text-[80px] max-md:text-[42px] font-extrabold relative">
             19 Mar
             <img
               src={circle}
               alt=""
-              className="absolute top-[-250px] max-md:top-[-80px]  left-[-100px] max-md:left-[-40px] h-[600px] max-md:h-[200px] "
+              className="absolute top-[-250px] max-md:top-[-100px]  left-[-100px] max-md:left-[-40px] h-[600px] max-md:h-[250px] "
             />
           </div>
 
@@ -384,7 +384,7 @@ const Home = () => {
               {socialLinks.map(({ icon, name }, index) => (
                 <div
                   key={index}
-                  className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-5 max-md:h-5"
+                  className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-6 max-md:h-6"
                   title={name}
                 >
                   {icon}
