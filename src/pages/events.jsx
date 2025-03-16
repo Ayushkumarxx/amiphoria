@@ -182,9 +182,13 @@ const Events = () => {
         {/* second section */}
         <div className="flex justify-between items-end text-white ">
           <div className="text-7xl max-md:text-3xl font-bold">DEBATE.</div>
-
-          <div className="text-[16px] max-md:text-[12px] text-zinc-900 ">
+            {/* big screen  */}
+          <div className="text-[16px] max-md:hidden text-zinc-900 ">
             AMITY-UNIVERSITY-JHARKHAND
+          </div>
+          {/* small screen */}
+          <div className="text-[12px] text-zinc-900 md:hidden ">
+            AMITY
           </div>
           <div className="text-7xl max-md:text-3xl font-bold text-right">
             <span className="text-[#F78939]">CINEMA.</span> ART. <br />
