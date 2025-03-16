@@ -5,12 +5,12 @@ import { MdOutlineElectricBolt } from "react-icons/md";
 import { SiYoutubegaming } from "react-icons/si";
 function ImageCard({ name, imageUrl }) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center max-md:mb-2.5">
       <p className="text-lg max-md:text-[10px] font-semibold">{name}</p>
       <img
         src={imageUrl}
         alt={name}
-        className="w-48 max-md:w-[50px] h-60 max-md:h-[100px] object-cover rounded-lg shadow-md grayscale"
+        className="w-48 max-md:w-[140px] h-60 max-md:h-[120px] object-cover rounded-lg shadow-md grayscale"
       />
     </div>
   );
@@ -54,20 +54,20 @@ const Events = () => {
         {/* main content */}
 
         <div className="flex flex-col mt-6  items-center">
-          <h1 className="text-[122px] max-md:text-[42px] font-extrabold">CULTURAL EVENT</h1>
+          <h1 className="text-[122px] max-md:text-[42px] font-extrabold text-center">CULTURAL EVENT</h1>
 
           {/* date line */}
           <div className="w-[120vw] h-[60px]   flex items-center justify-between  -translate-x-10">
             {[...Array(12)].map((_, index) => (
               <div key={index} className="flex items-center ">
-                <div className="text-[46px] max-md:text-[18px] font-extrabold text-black">21</div>
+                <div className="text-[46px] w-[150px] max-md:w-[75px] max-md:text-[18px] font-extrabold text-black">21</div>
                 <img src={slash} alt="" className="w-[50px] max-md:w-[25px] " />
                 <img src={slash} alt="" className="w-[50px] max-md:hidden" />
               </div>
             ))}
           </div>
 
-          <h1 class="text-6xl max-md:text-2xl font-bold text-outline max-md:text-outline-2 mt-10 font-sans">
+          <h1 class="text-6xl max-md:text-3xl font-bold text-outline mt-10 font-sans">
             TAKE PART
           </h1>
         </div>
@@ -75,17 +75,17 @@ const Events = () => {
         {/* divider */}
 
         <div className="flex justify-between mt-[50px] items-center text-2xl  max-md:text-[16px] font-bold">
-          <div className="w-[30%] max-md:w-[15%] h-[2px] bg-black"></div>
+          <div className="w-[30%] max-md:w-[5%] h-[2px] bg-black"></div>
           <div className="text-[#504D00]">WEDNESDAY</div>
           <div className="underline">FRIDAY </div>
           <div className="text-[#504D00]">THRUSDAY </div>
 
-          <div className="w-[30%]  max-md:w-[15%] h-[2px] bg-black"></div>
+          <div className="w-[30%]  max-md:w-[5%] h-[2px] bg-black"></div>
         </div>
 
         {/* images card */}
 
-        <div className="flex justify-between mt-[10px] items-center px-[50px] max-md:px-[10px]">
+        <div className="flex flex-wrap justify-between mt-[10px] items-center px-[50px] max-md:px-[10px]">
           {Culturalimages.map((item, index) => (
             <ImageCard key={index} name={item.name} imageUrl={item.imageUrl} />
           ))}
