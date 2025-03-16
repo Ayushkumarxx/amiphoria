@@ -14,15 +14,15 @@ const TeamSection = () => {
   return (
     <div className="flex justify-between items-center mt-4 flex-wrap">
       {teamMembers.map((member, index) => (
-        <div key={index} className="flex flex-col w-[280px] h-[350px] overflow-hidden mb-[10px] max-md:w-[200px] max-md:h-[300px]">
+        <div key={index} className="flex flex-col w-[280px] h-[350px] overflow-hidden mb-[10px] max-md:w-[150px] max-md:h-[250px]">
           <img
             src={member.image}
             alt={member.name}
             className="w-full h-[80%] object-cover grayscale-100"
           />
           <div className="w-full flex flex-col p-2 justify-between items-end">
-            <p className="text-[16px] font-bold text-black mt-2">{member.role}</p>
-            <p className="text-[22px] font-bold text-black">{member.name}</p>
+            <p className="text-[16px] max-md-text-[12px] font-bold text-black mt-2 max-md:mt-1">{member.role}</p>
+            <p className="text-[22px] max-md-text-[16px] font-bold text-black">{member.name}</p>
           </div>
         </div>
       ))}
@@ -40,7 +40,7 @@ const Team = () => {
 
         {/* left section */}
         <div>
-          <div className="text-[142px] max-md:text-[52px] leading-none mb-2 font-bold">MEET</div>
+          <div className="text-[142px] max-md:text-[36px] leading-none mb-2 font-bold">MEET</div>
           <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] ">
             Chill <IoSparklesSharp /> Guyz
           </div>
@@ -50,7 +50,7 @@ const Team = () => {
           <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] mb-2 ">
             Unique <IoSparklesSharp /> Talented <IoSparklesSharp /> Perfect
           </div>
-          <div className="text-[142px] max-md:text-[42px] font-bold leading-none">OUR TEAM</div>
+          <div className="text-[142px] max-md:text-[36px] font-bold leading-none">OUR TEAM</div>
         </div>
       </section>
 
