@@ -305,28 +305,34 @@ const Home = () => {
       {/* what is amiphoria  */}
 
       <div className="nt-whatfor w-full h-[700px] flex flex-col justify-center items-center bg-[#B4FF52] text-center">
-        <div className="text-[18px] font-bold capitalize ">
+
+        {/* title */}
+        <div className="text-[18px] max-md:text-[14px] font-bold capitalize ">
           what is amiphoria?
         </div>
-        <div className="mt-2 text-[40px] font-extrabold max-w-[900px] relative">
+
+        {/* desc */}
+        <div className="mt-2 text-[40px] max-md:text-[24px] font-extrabold max-w-[900px] relative">
           Amiphoria 2025 is Amity’s grand cultural fest{" "}
           <span className="text-[#EF64FE] ">featuring </span>music, dance,
           competitions, and{" "}
           <span className="text-[#EF64FE] ">unforgettable</span> experiences.
+
+          {/* images */}
           <img
             src={plane}
             alt=""
-            className="absolute top-[-100px] right-[-100px] w-[120px]"
+            className="absolute top-[-100px] right-[-100px] w-[120px] max-md:w-[80px] "
           />
           <img
             src={heart}
             alt=""
-            className="absolute top-[-50px] left-[-80px] w-[120px] opacity-60 rotate-[-30deg]"
+            className="absolute top-[-50px] left-[-80px] w-[120px]  rotate-[-30deg] max-md:w-[80px]"
           />
           <img
             src={music}
             alt=""
-            className="absolute bottom-[-100px] right-[0px] w-[120px] opacity-60 rotate-[10deg] "
+            className="absolute bottom-[-100px] right-[0px] w-[120px] rotate-[10deg] max-md:w-[80px]"
           />
         </div>
       </div>
