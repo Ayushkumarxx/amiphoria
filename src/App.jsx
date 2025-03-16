@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {Home, Register, Sponsors, Team, Events, Update} from './pages/index';
+import OpeningAnimation from './utils/opening';
 
 function App() {
   
 
   return (
     <Router>
+     
+        <OpeningAnimation />
+    
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/reg" element={<Register/>} />
