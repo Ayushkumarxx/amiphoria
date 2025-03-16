@@ -174,7 +174,7 @@ const Home = () => {
       <Navbar />
 
       {/* hero section */}
-      <div className="home h-[665px] max-md:h-auto max-md:pb-5 relative max-w-[1350px] mt-4 px-[10px] mx-auto">
+      <div className="home h-[665px] max-md:h-auto max-md:pb-5 relative max-w-[1350px] mt-4 px-[10px] mx-auto overflow-x-hidden">
         {/* actress photo */}
         <div className="h-[600px] absolute right-[75px] bottom-[0px] max-md:hidden">
           <img
@@ -348,7 +348,7 @@ const Home = () => {
         </div>
       </div>
       {/* dates section */}
-      <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px]">
+      <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px] overflow-x-hidden">
         {/* first */}
         <div className="w-[50%] flex flex-col justify-between p-2">
           <div className="text-[80px] max-md:text-[42px] font-extrabold relative">
@@ -403,7 +403,7 @@ const Home = () => {
 
       {/* tickets section */}
 
-      <div className="bg-[#F2ECE7] py-20">
+      <div className="bg-[#F2ECE7] py-20 overflow-x-hidden">
 
         {/* first section */}
         <div className="border-[2px] border-black h-[450px] max-md:h-auto w-full flex  max-md:flex-col">
