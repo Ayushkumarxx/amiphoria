@@ -168,7 +168,6 @@ const Home = () => {
 
       {/* hero section */}
       <div className="home h-[665px] max-md:h-auto relative max-w-[1350px] mt-4 px-[10px] mx-auto">
-
         {/* actress photo */}
         <div className="h-[600px] absolute right-[75px] bottom-[0px] max-md:hidden">
           <img
@@ -177,20 +176,22 @@ const Home = () => {
             className="w-full h-full object-contain grayscale-100"
           />
         </div>
-         {/* head text */}
-        <div className="nt-big-text flex justify-between items-center   ">
-          <div className="text-[162px] max-md:text-[42px] font-extrabold relative">
+        {/* head text */}
+        <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  ">
+          <div className="text-[162px] max-md:text-[52px] font-extrabold relative">
             Amiphoria{" "}
             <span className="absolute text-[24px] max-md:text-[12px] left-[15px] top-[0px]">
               Mar 19-21/25
             </span>
           </div>
-          <div className="text-[162px] max-md:text-[42px] font-extrabold">2K24</div>
+          <div className="text-[162px] max-md:text-[52px] font-extrabold">
+            2K24
+          </div>
         </div>
 
         <div className="scoialNText flex justify-between items-center">
-          <div className="w-[50%]">
-            <p>
+          <div className="w-[50%] max-md:w-[80%]">
+            <p className="text-[18px] max-md:text-[14px] ">
               Get ready for an electrifying blend of music, dance, fashion, and
               talent at Amity’s biggest cultural fest! With thrilling
               competitions, mesmerizing performances, and endless fun, Amiphoria
@@ -201,10 +202,10 @@ const Home = () => {
             </p>
 
             <div className="nt-buttons flex gap-2 mt-6">
-              <button className="bg-[#A9EB09] text-black py-[10px] px-[40px] rounded-[8px] font-semibold">
+              <button className="bg-[#A9EB09] text-black py-[10px] max-md:py-[5px] px-[40px] max-md:px-[20px] max-md:text-[14px] rounded-[8px] font-semibold">
                 Register Now
               </button>
-              <button className="bg-white text-black py-[10px] px-[40px] rounded-[8px] font-semibold">
+              <button className="bg-white text-black py-[10px] max-md:py-[5px] px-[40px] max-md:px-[20px] max-md:text-[14px]  rounded-[8px] font-semibold">
                 Download Brochure
               </button>
             </div>
@@ -229,7 +230,7 @@ const Home = () => {
           Amiphoria 2025 – Where Energy Meets Euphoria!" 🎶🔥
         </div> */}
 
-        <div className="sponsar w-[70%] flex justify-between items-center mt-14 ">
+        <div className="sponsar w-[70%] max-md:w-full flex justify-between items-center mt-14 ">
           <img src={spon1} alt="" className="spon_img" />
           <img src={spon2} alt="" className="spon_img" />
           <img src={spon3} alt="" className="spon_img" />
@@ -273,8 +274,8 @@ const Home = () => {
           ))}
         </div>
       </div>
-       {/* divider section */}
-       <div className="w-full h-[850px]  flex flex-col justify-between py-20">
+      {/* divider section */}
+      <div className="w-full h-[850px]  flex flex-col justify-between py-20">
         <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
           <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
@@ -296,8 +297,6 @@ const Home = () => {
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
         </div>
       </div>
-    
-     
 
       {/* what is amiphoria  */}
 
@@ -327,8 +326,8 @@ const Home = () => {
           />
         </div>
       </div>
-        {/* dates section */}
-        <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px]">
+      {/* dates section */}
+      <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px]">
         <div className="w-[50%] flex flex-col justify-between">
           <div className="text-[80px] font-extrabold relative">
             19 Mar
