@@ -1,34 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { logo } from "../assets/index";
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events" },
+    { name: "Sponsors", path: "/sponsors" },
+    { name: "Team", path: "/team" },
+    { name: "Updates", path: "/update" },
+  ];
+
   return (
-    <nav className="flex max-w-[1350px] mx-auto justify-between items-center  p-[10px] h-[75px]  ">
+    <nav className="flex max-w-[1350px] mx-auto justify-between items-center p-4 h-[75px] relative">
+      {/* Logo */}
       <div className="h-full w-[120px]">
-        <img src={logo} alt="" className="h-full w-full object-contain brightness-0" />
+        <img src={logo} alt="Logo" className="h-full w-full object-contain brightness-0" />
       </div>
-      <div className="flex gap-[50px] text-[18px] font-semibold max-md:hidden">
-        <div>
-          <a href="">Home</a>
-        </div>
-        <div>
-          <a href="">Events</a>
-        </div>
-        <div>
-          <a href="">Sponsars </a>
-        </div>
-        <div>
-          <a href="">Team</a>
-        </div>
-        <div>
-          <a href="">Updates</a>
-        </div>
-     
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex gap-[50px] text-[18px] font-semibold">
+        {navLinks.map(({ name, path }) => (
+          <Link key={name} to={path} className="hover:text-[#A9EB09] transition duration-300">
+            {name}
+          </Link>
+        ))}
       </div>
-      <div>
+
+      {/* Register Button */}
+      <div className="hidden md:block">
         <button className="bg-[#A9EB09] text-black py-[10px] px-[40px] rounded-[8px] font-semibold">
           Register
         </button>
       </div>
+
+      {/* Mobile Menu Button */}
+      <button className="md:hidden text-2xl z-[100]" onClick={toggleMenu}>
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* Mobile Full-Screen Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-lg flex flex-col items-center justify-center gap-8 z-50"
+          >
+            {navLinks.map(({ name, path }, index) => (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+              >
+                <Link
+                  to={path}
+                  className="text-3xl md:text-5xl font-bold text-white hover:text-[#A9EB09] transition duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {name}
+                </Link>
+              </motion.div>
+            ))}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              className="bg-[#A9EB09] text-black py-3 px-8 rounded-[8px] font-semibold text-xl"
+              onClick={() => setIsOpen(false)}
+            >
+              Register
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
