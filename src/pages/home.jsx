@@ -167,7 +167,7 @@ const Home = () => {
       <Navbar />
 
       {/* hero section */}
-      <div className="home h-[665px] max-md:h-auto relative max-w-[1350px] mt-4 px-[10px] mx-auto">
+      <div className="home h-[665px] max-md:h-auto max-md:pb-5 relative max-w-[1350px] mt-4 px-[10px] mx-auto">
         {/* actress photo */}
         <div className="h-[600px] absolute right-[75px] bottom-[0px] max-md:hidden">
           <img
@@ -304,7 +304,7 @@ const Home = () => {
 
       {/* what is amiphoria  */}
 
-      <div className="nt-whatfor w-full h-[700px] flex flex-col justify-center items-center bg-[#B4FF52] text-center">
+      <div className="nt-whatfor w-full h-[700px] flex flex-col justify-center items-center bg-[#B4FF52] text-center p-2.5">
 
         {/* title */}
         <div className="text-[18px] max-md:text-[14px] font-bold capitalize ">
@@ -322,17 +322,17 @@ const Home = () => {
           <img
             src={plane}
             alt=""
-            className="absolute top-[-100px] right-[-100px] w-[120px] max-md:w-[80px] "
+            className="absolute top-[-100px] right-[-100px] max-md:right-[10%] w-[120px] max-md:w-[80px] "
           />
           <img
             src={heart}
             alt=""
-            className="absolute top-[-50px] left-[-80px] w-[120px]  rotate-[-30deg] max-md:w-[80px]"
+            className="absolute top-[-50px] left-[-80px] max-md:left-[-10%] w-[120px]  rotate-[-30deg] max-md:w-[80px]"
           />
           <img
             src={music}
             alt=""
-            className="absolute bottom-[-100px] right-[0px] w-[120px] rotate-[10deg] max-md:w-[80px]"
+            className="absolute bottom-[-100px] max-md:bottom-[-50px] right-[0px] max-md:right-[10%] w-[120px] rotate-[10deg] max-md:w-[80px]"
           />
         </div>
       </div>
