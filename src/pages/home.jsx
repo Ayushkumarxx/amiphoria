@@ -243,7 +243,7 @@ const Home = () => {
           />
         </div>
         {/* head text */}
-        <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  max-md:mt-12">
+        <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  max-md:mt-10">
           <div className="text-[162px] max-md:text-[56px] font-extrabold relative ">
             Amiphoria{" "}
             <span className="absolute text-[24px] max-md:text-[12px] left-[15px] top-[0px]">
@@ -403,64 +403,65 @@ const Home = () => {
       </div>
 
       {/* dates section */}
-      <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px] ">
-        {/* first */}
-        <div className="w-[50%] flex flex-col justify-between p-2">
-          <div className="text-[80px] max-md:text-[42px] font-extrabold relative">
-            19 Mar
-            <img
-              src={circle}
-              alt=""
-              className="absolute top-[-250px] max-md:top-[-100px]  left-[-100px]  h-[600px] max-md:hidden"
-            />
+      <div className="bg-[#151515] text-white">
+        <div className="nt-dates flex justify-between py-[150px] max-w-[1050px]  mx-auto h-[700px] ">
+          {/* first */}
+          <div className="w-[50%] flex flex-col justify-between p-2">
+            <div className="text-[80px] max-md:text-[42px] font-extrabold relative">
+              19 Mar
+              <img
+                src={circle}
+                alt=""
+                className="absolute top-[-250px] max-md:top-[-100px]  left-[-100px]  h-[600px] max-md:hidden"
+              />
+            </div>
+
+            <div className="text-[22px] max-md:text-[14px] font-bold relative">
+              At Amity <br />
+              University Jharkhand
+              <img
+                src={king}
+                alt=""
+                className="absolute top-[-50px] max-md:top-[-60px] left-[-100px] max-md:left-[10px] h-[50px] max-md:h-[30px] rotate-[-30deg]"
+              />
+            </div>
           </div>
 
-          <div className="text-[22px] max-md:text-[14px] font-bold relative">
-            At Amity <br />
-            University Jharkhand
-            <img
-              src={king}
-              alt=""
-              className="absolute top-[-50px] max-md:top-[-60px] left-[-100px] max-md:left-[10px] h-[50px] max-md:h-[30px] rotate-[-30deg]"
-            />
-          </div>
-        </div>
+          {/* second */}
+          <div className="w-[50%] flex flex-col justify-between items-end text-right p-2">
+            <div className="text-[18px] max-md:text-[14px] font-bold relative">
+              Hec core area, near railway crossing, pundag , <br />
+              ranchi , jharkhand 834001
+              <img
+                src={sparkle}
+                alt=""
+                className="absolute top-[-50px] right-[-100px] max-md:right-[-10px] h-[50px] rotate-[30deg]"
+              />
+            </div>
 
-        {/* second */}
-        <div className="w-[50%] flex flex-col justify-between items-end text-right p-2">
-          <div className="text-[18px] max-md:text-[14px] font-bold relative">
-            Hec core area, near railway crossing, pundag , <br />
-            ranchi , jharkhand 834001
-            <img
-              src={sparkle}
-              alt=""
-              className="absolute top-[-50px] right-[-100px] max-md:right-[-10px] h-[50px] rotate-[30deg]"
-            />
-          </div>
+            <div className="flex flex-col gap-4 ">
+              <p className="text-[18px] max-md:text-[14px] font-bold">
+                follow us on
+              </p>
 
-          <div className="flex flex-col gap-4 ">
-            <p className="text-[18px] max-md:text-[14px] font-bold">
-              follow us on
-            </p>
-
-            <div className="flex gap-6 max-md:gap-4 flex-wrap">
-              {socialLinks.map(({ icon, name, link }, index) => (
-                <div
-                  key={index}
-                  className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-5 max-md:h-5 cursor-pointer"
-                  title={name}
-                  onClick={() => navigateTo(link, true)}
-                >
-                  {icon}
-                </div>
-              ))}
+              <div className="flex gap-6 max-md:gap-4 flex-wrap">
+                {socialLinks.map(({ icon, name, link }, index) => (
+                  <div
+                    key={index}
+                    className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-5 max-md:h-5 cursor-pointer"
+                    title={name}
+                    onClick={() => navigateTo(link, true)}
+                  >
+                    {icon}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* divider section */}
-      <div className="w-full h-[850px]  flex flex-col justify-between py-20 bg-[#F2ECE7]  ">
+      <div className="w-full h-[850px]  flex flex-col justify-between py-20   ">
         <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
           <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
