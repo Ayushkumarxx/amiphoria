@@ -170,11 +170,11 @@ const Home = () => {
     { icon: <FaLinkedin />, name: "LinkedIn" },
   ];
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
 
       {/* hero section */}
-      <div className="home h-[665px] max-md:h-auto max-md:pb-5 relative max-w-[1350px] mt-4 px-[10px] mx-auto overflow-x-hidden">
+      <div className="home h-[665px] max-md:h-auto max-md:pb-10 relative max-w-[1350px] mt-4 px-[10px] mx-auto ">
         {/* actress photo */}
         <div className="h-[600px] absolute right-[75px] bottom-[0px] max-md:hidden">
           <img
@@ -198,7 +198,7 @@ const Home = () => {
 
         {/* details */}
 
-        <div className="scoialNText flex justify-between items-center max-md:mt-2.5">
+        <div className="scoialNText flex justify-between items-center max-md:mt-5">
           <div className="w-[50%] max-md:w-[85%]">
             <p className="text-[18px] max-md:text-[14px] ">
               Get ready for an electrifying blend of music, dance, fashion, and
@@ -250,7 +250,7 @@ const Home = () => {
         </div>
       </div>
       {/* events section */}
-      <div className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center overflow-x-hidden ">
+      <div className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center  ">
 
         {/* heading */}
         <p className="text-[16px] font-bold text-[#fff] max-md:text-[12px] ">Amiphoria Events </p>
@@ -377,7 +377,7 @@ const Home = () => {
         </div>
       </div>
          {/* divider section */}
-         <div className="w-full h-[850px]  flex flex-col justify-between py-20  overflow-x-hidden">
+         <div className="w-full h-[850px]  flex flex-col justify-between py-20  ">
         <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
           <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
@@ -402,7 +402,7 @@ const Home = () => {
 
       {/* tickets section */}
 
-      <div className="bg-[#F2ECE7] py-20 overflow-x-hidden">
+      <div className="bg-[#F2ECE7] py-20 ">
 
         {/* first section */}
         <div className="border-[2px] border-black h-[450px] max-md:h-auto w-full flex  max-md:flex-col">
@@ -435,7 +435,7 @@ const Home = () => {
       
 
       <Footer />
-    </>
+    </div>
   );
 };
 
