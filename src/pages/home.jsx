@@ -250,7 +250,6 @@ const Home = () => {
         </div>
       </div>
       {/* events section */}
-
       <div className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center overflow-x-hidden ">
 
         {/* heading */}
@@ -277,46 +276,23 @@ const Home = () => {
         <div className="w-[120vw] h-[60px] max-md:h-[50px] bg-[#EF64FE] mt-20 flex items-center justify-between rotate-2  -translate-x-10 origin-center gap-[30px]">
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
-              <div className="text-[24px] max-md:text-[18px]  font-bold text-[#fff]">Join</div>
+              <div className="text-[24px] max-md:text-[16px]  font-bold text-[#fff]">Join</div>
               <img src={sparkle} alt="" className="w-[40px]" />
             </div>
           ))}
         </div>
-        <div className="w-[120vw] h-[60px]  max-md:h-[50px] bg-[#A9EB09] mt-4 flex items-center justify-between -rotate-4 origin-left translate-x-10 gap-[30px]">
+        <div className="w-[120vw] h-[60px]  max-md:h-[50px] bg-[#8B1E1E] mt-4 flex items-center justify-between -rotate-4 origin-left translate-x-10 gap-[30px]">
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
-              <div className="text-[24px] max-md:text-[18px] font-bold text-[#fff]">Fast</div>
+              <div className="text-[24px] max-md:text-[16px] font-bold text-[#fff]">Fast</div>
               <img src={sparkle} alt="" className="w-[40px] " />
             </div>
           ))}
         </div>
       </div>
-      {/* divider section */}
-      <div className="w-full h-[850px]  flex flex-col justify-between py-20  overflow-x-hidden">
-        <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
-          <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
-          <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
-          <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
-          <TicketCard eventTitle={"ACEDMICS"} eventTitle2={"LIGHT"} />
-        </div>
-
-        <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2 -translate-x-10 ">
-          <TicketCard eventTitle={"CULTURAL"} eventTitle2={"EVENT"} />
-          <TicketCard eventTitle={"SINGER"} eventTitle2={"DAY"} />
-          <TicketCard eventTitle={"DANCE"} eventTitle2={"OFF"} />
-          <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
-        </div>
-
-        <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2 -translate-x-30 max-md:-translate-x-0">
-          <TicketCard eventTitle={"OPEN"} eventTitle2={"MIC"} />
-          <TicketCard eventTitle={"SPORT"} eventTitle2={"EVENT"} />
-          <TicketCard eventTitle={"ESPORT"} eventTitle2={"TEAM"} />
-          <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
-        </div>
-      </div>
+   
 
       {/* what is amiphoria  */}
-
       <div className="nt-whatfor w-full h-[700px] flex flex-col justify-center items-center bg-[#B4FF52] text-center p-2.5">
         {/* title */}
         <div className="text-[18px] max-md:text-[14px] font-bold capitalize ">
@@ -326,9 +302,9 @@ const Home = () => {
         {/* desc */}
         <div className="mt-2 text-[40px] max-md:text-[24px] font-extrabold max-w-[900px] relative">
           Amiphoria 2025 is Amity’s grand cultural fest{" "}
-          <span className="text-[#EF64FE] ">featuring </span>music, dance,
+          <span className="text-[#8B1E1E] ">featuring </span>music, dance,
           competitions, and{" "}
-          <span className="text-[#EF64FE] ">unforgettable</span> experiences.
+          <span className="text-[#8B1E1E] ">unforgettable</span> experiences.
           {/* images */}
           <img
             src={plane}
@@ -348,7 +324,7 @@ const Home = () => {
         </div>
       </div>
       {/* dates section */}
-      <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px] overflow-x-hidden">
+      <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px] ">
         {/* first */}
         <div className="w-[50%] flex flex-col justify-between p-2">
           <div className="text-[80px] max-md:text-[42px] font-extrabold relative">
@@ -400,6 +376,29 @@ const Home = () => {
           </div>
         </div>
       </div>
+         {/* divider section */}
+         <div className="w-full h-[850px]  flex flex-col justify-between py-20  overflow-x-hidden">
+        <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
+          <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
+          <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
+          <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
+          <TicketCard eventTitle={"ACEDMICS"} eventTitle2={"LIGHT"} />
+        </div>
+
+        <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2 -translate-x-10 ">
+          <TicketCard eventTitle={"CULTURAL"} eventTitle2={"EVENT"} />
+          <TicketCard eventTitle={"SINGER"} eventTitle2={"DAY"} />
+          <TicketCard eventTitle={"DANCE"} eventTitle2={"OFF"} />
+          <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
+        </div>
+
+        <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2 -translate-x-30 max-md:-translate-x-0">
+          <TicketCard eventTitle={"OPEN"} eventTitle2={"MIC"} />
+          <TicketCard eventTitle={"SPORT"} eventTitle2={"EVENT"} />
+          <TicketCard eventTitle={"ESPORT"} eventTitle2={"TEAM"} />
+          <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
+        </div>
+      </div>
 
       {/* tickets section */}
 
@@ -433,6 +432,7 @@ const Home = () => {
           AMIPHORIA 2K25
         </div>
       </div>
+      
 
       <Footer />
     </>
