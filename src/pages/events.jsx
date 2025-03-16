@@ -77,7 +77,7 @@ const Events = () => {
     <div
       className={`flex w-full h-[30vh] ${reverse ? "flex-row-reverse" : ""}`}
     >
-      <div className="w-[50%] h-full flex justify-center items-center text-[62px] max-md:text-[32px] p-4 font-semibold">
+      <div className="w-[50%] h-full flex justify-center items-center text-[62px] max-md:text-[26px] p-4 font-semibold">
         {title}
       </div>
       <div className="w-[50%] h-full relative">
