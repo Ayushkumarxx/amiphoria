@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 const OpeningAnimation = () => {
-  const navigate = useNavigate();
+ 
   const [showAnimation, setShowAnimation] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setShowAnimation(false);
-      navigate("/");
+      
     }, 2500); // Smooth transition duration
-  }, [navigate]);
+  }, []);
 
   return (
     <AnimatePresence>
