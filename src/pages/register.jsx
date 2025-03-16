@@ -34,9 +34,11 @@ const EventCard = ({ number, title, events, imageSrc }) => {
 const Register = () => {
   return (
     <>
-      <div className="w-full h-screen bg-[#E5DDD4] ">
-        <div className="max-w-[1350px] mx-auto  h-[10%]   flex justify-between items-center border-b-[1px] border-b-black">
-          <div className="text-[24px]">Amiphoria</div>
+      <div className="w-full h-screen max-md:h-auto bg-[#E5DDD4]  ">
+
+        {/* nav head */}
+        <div className="max-w-[1350px] mx-auto  h-[10%] max-md:h-[75px]   flex justify-between items-center border-b-[1px] border-b-black px-2.5">
+          <div className="text-[24px] ">Amiphoria</div>
           <div className="flex gap-[8px] flex-col">
             <div className="w-[25px] h-[2px] bg-black"></div>
             <div className="w-[25px] h-[2px] bg-black"></div>
@@ -46,17 +48,21 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="max-w-[1350px] mx-auto flex justify-between  h-[90%] py-2.5">
-          <div className="w-[45%] flex flex-col justify-around ">
+        <div className="max-w-[1350px] mx-auto flex max-md:flex-col justify-between  h-[90%] max-md:h-auto py-2.5">
+
+          {/* first section */}
+          <div className="w-[45%] max-md:w-full max-md:px-2.5 flex flex-col justify-around ">
+
+            {/* heading */}
             <div className="flex w-full justify-between items-end px-[10px]">
               <div className="flex flex-col gap-[10px]">
                 <div className="text-[24px] font-normal ">Join the</div>
-                <div className="text-[72px] font-semibold leading-20">
+                <div className="text-[72px] max-md:text-[36px] font-semibold leading-20 max-md:leading-12">
                   Fun of <br />
                   Amiphoria
                 </div>
               </div>
-              <div className="text-[92px]  leading-24">
+              <div className="text-[92px]   max-md:text-[42px] font-semibold max-md:leading-20 leading-24">
                 2K <br />
                 25
               </div>
@@ -64,15 +70,15 @@ const Register = () => {
 
             {/* <div className="w-full h-[2px] bg-black mt-[20px]"></div> */}
 
-            <div className="flex flex-col gap-[10px] w-full h-[200px] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] p-6">
-              <div className="flex h-[50%] w-full p-2 justify-between items-center text-[24px]  ">
+            <div className="flex flex-col gap-[10px] w-full  h-[200px] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] p-6 max-md:mt-[40px]">
+              <div className="flex h-[50%] w-full p-2 justify-between items-center text-[24px] max-md:text-[16px]  ">
                 <div className="flex gap-2  items-center">
                   <HiSparkles />
                   Acedmics sports tech cultrual
                 </div>
                 <div>Fest</div>
               </div>
-              <div className="flex h-[50%] w-full p-2 justify-between items-center  text-[24px] ">
+              <div className="flex h-[50%] w-full p-2 justify-between items-center  text-[24px] max-md:text-[16px] ">
                 <div className="flex gap-2 items-center">
                   {" "}
                   <HiSparkles />
@@ -82,20 +88,24 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <div className="w-[10%] flex flex-col justify-between items-center">
-            <div className="w-[2px] h-[80%] bg-black"></div>
-            <div className="w-[80px] h-[80px] rounded-[100px] bg-black flex justify-center items-center text-white text-[18px]">
+
+          {/* divider */}
+          <div className="w-[10%] max-md:w-full flex flex-col justify-between items-center">
+            <div className="w-[2px] h-[80%] max-md:w-full max-md:h-[2px] max-md:my-[40px] bg-black"></div>
+            <div className="w-[80px] h-[80px] rounded-[100px] bg-black flex justify-center items-center text-white text-[18px] max-md:hidden">
               <HiArrowDown />
             </div>
           </div>
-          <div className="w-[45%] flex flex-col justify-around items-center">
-            <div className="text-[42px] font-semibold">
+
+          {/* second section */}
+          <div className="w-[45%] max-md:w-full max-md:px-2.5 max-md:pb-[40px] flex flex-col justify-around items-center">
+            <div className="text-[42px] max-md:text-[32px] font-semibold">
               Get your self registered <br />
-              <span className="text-[52px] text-[#F87037] font-serif">
+              <span className="text-[52px] max-md:text-[36px] text-[#F87037] font-serif">
                 ASAP !
               </span>
             </div>
-            <div className="w-[50%] h-[60%]">
+            <div className="w-[50%] h-[60%] max-md:w-[90%] ">
               <img
                 src={fest}
                 alt=""
