@@ -2,80 +2,71 @@ import React from "react";
 import { Navbar } from "../components/index";
 import { IoSparklesSharp } from "react-icons/io5";
 import { team1, team2, team3, team4 } from "../assets/index";
+
+const teamMembers = [
+  { name: "Ayush", role: "coder", image: team1 },
+  { name: "Praveer", role: "presenter", image: team2 },
+  { name: "Aditya", role: "designer", image: team3 },
+  { name: "Rishabh", role: "supporter", image: team4 },
+];
+
+const TeamSection = () => {
+  return (
+    <div className="flex justify-between items-center mt-4 flex-wrap">
+      {teamMembers.map((member, index) => (
+        <div key={index} className="flex flex-col w-[280px] h-[350px] overflow-hidden mb-[10px] max-md:w-[200px] max-md:h-[300px]">
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-[80%] object-cover grayscale-100"
+          />
+          <div className="w-full flex flex-col p-2 justify-between items-end">
+            <p className="text-[16px] font-bold text-black mt-2">{member.role}</p>
+            <p className="text-[22px] font-bold text-black">{member.name}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 const Team = () => {
   return (
-    <div className="bg-[#F2ECE7] ">
+    <section className="bg-[#F2ECE7] ">
       <Navbar />
 
-      <div className="max-w-[1250px] mt-[50px] mx-auto flex justify-between items-center">
+      {/* big words */}
+
+      <section className="max-w-[1250px] mt-[50px] px-2.5 mx-auto flex justify-between items-center">
+
+        {/* left section */}
         <div>
-          <div className="text-[142px] leading-none mb-2 font-bold">MEET</div>
-          <div className="border-[4px] border-dashed h-[100px] flex justify-around  items-center p-2.5 text-[32px] ">
+          <div className="text-[142px] max-md:text-[52px] leading-none mb-2 font-bold">MEET</div>
+          <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] ">
             Chill <IoSparklesSharp /> Guyz
           </div>
         </div>
+        {/* right section */}
         <div>
-          <div className="border-[4px] border-dashed h-[100px] flex justify-around  items-center p-2.5 text-[32px] mb-2 ">
+          <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] mb-2 ">
             Unique <IoSparklesSharp /> Talented <IoSparklesSharp /> Perfect
           </div>
-          <div className="text-[142px] font-bold leading-none">OUR TEAM</div>
+          <div className="text-[142px] max-md:text-[42px] font-bold leading-none">OUR TEAM</div>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-[1250px] mt-[50px] mx-auto pb-10">
+      {/* second section */}
+
+      <section className="max-w-[1250px] mt-[50px] mx-auto pb-10 px-2.5">
         <div className="w-full h-[2px] bg-black mt-[20px]"></div>
-        <div>
+
+        {/* some words */}
+        <div className="max-md:text-[12px] text-[18px] font-semibold ">
           Hey we are students of amity university jharkhand who love to code.
         </div>
 
-        <div className="flex justify-between items-center mt-4">
-          <div className="flex flex-col w-[280px] h-[350px] overflow-hidden ">
-            <img
-              src={team1}
-              alt=""
-              className="w-full h-[80%] object-cover grayscale-100"
-            />
-            <div className="w-full flex flex-col p-2 justify-between items-end">
-              <p className="text-[16px] font-bold text-black mt-2">coder</p>
-              <p className="text-[22px] font-bold text-black">Ayush</p>
-            </div>
-          </div>
-          <div className="flex flex-col w-[280px] h-[350px] overflow-hidden ">
-            <img
-              src={team2}
-              alt=""
-              className="w-full h-[80%] object-cover grayscale-100"
-            />
-            <div className="w-full flex flex-col p-2 justify-between items-end">
-              <p className="text-[16px] font-bold text-black mt-2">presenter</p>
-              <p className="text-[22px] font-bold text-black">Praveer</p>
-            </div>
-          </div>
-          <div className="flex flex-col w-[280px] h-[350px] overflow-hidden ">
-            <img
-              src={team3}
-              alt=""
-              className="w-full h-[80%] object-cover grayscale-100"
-            />
-            <div className="w-full flex flex-col p-2 justify-between items-end">
-              <p className="text-[16px] font-bold text-black mt-2">designer</p>
-              <p className="text-[22px] font-bold text-black">Aditya</p>
-            </div>
-          </div>
-          <div className="flex flex-col w-[280px] h-[350px] overflow-hidden ">
-            <img
-              src={team4}
-              alt=""
-              className="w-full h-[80%] object-cover grayscale-100"
-            />
-            <div className="w-full flex flex-col p-2 justify-between items-end">
-              <p className="text-[16px] font-bold text-black mt-2">supporter</p>
-              <p className="text-[22px] font-bold text-black">Rishabh</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <TeamSection />
+      </section>
+    </section>
   );
 };
 
