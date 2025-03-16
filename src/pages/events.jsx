@@ -272,6 +272,7 @@ const Events = () => {
 
       {/* section 5 */}
       <section className="h-[100vh] w-full bg-black sticky top-0 z-50  py-10">
+        {/* header */}
         <div className="flex w-full justify-between items-center  text-white font-semibold px-10 ">
           <div className="flex items-center gap-2">
             {" "}
@@ -279,14 +280,16 @@ const Events = () => {
           </div>
           <div>Get Registered</div>
         </div>
-        <div className="w-[100vw] h-[25vh]  rotate-2 translate-y-[80px] flex">
+
+        {/* first */}
+        <div className="w-[100vw] h-[25vh] max-md:h-[20vh]  rotate-2 translate-y-[80px] flex">
           <div className="w-[20%] pattern-1"></div>
           <div
             className="w-[80%]   gradient-1  py-4  flex justify-between flex-col
           "
           >
             <div className="w-full h-[2px] bg-white"></div>
-            <div className="flex justify-around text-[42px] font-semibold">
+            <div className="flex justify-around text-[42px] max-md:text-[24px] font-semibold">
               <div>BEYOND</div>
               <div>NORMAL</div>
               <div>GAMING</div>
@@ -294,10 +297,12 @@ const Events = () => {
             <div className="w-full h-[2px] bg-white"></div>
           </div>
         </div>
-        <div className="w-[100vw] h-[25vh] bg-amber-300 -rotate-2 translate-y-[80px]  flex">
+
+        {/* second */}
+        <div className="w-[100vw] h-[25vh] max-md:h-[20vh] bg-amber-300 -rotate-2 translate-y-[80px]  flex">
           <div className="w-[80%]  gradient-2 py-4 flex justify-between flex-col">
             <div className="w-full h-[2px] bg-white"></div>
-            <div className="flex justify-around text-[42px] font-semibold">
+            <div className="flex justify-around text-[42px] max-md:text-[24px] font-semibold">
               <div>ESPORT</div>
               <div>
                 <SiYoutubegaming />
@@ -307,13 +312,14 @@ const Events = () => {
             <div className="w-full h-[2px] bg-white"></div>
           </div>
           <div className="w-[20%] pattern-1"></div>
-        </div>{" "}
-        flex justify-between flex-row
-        <div className="w-[100vw] h-[25vh] bg-amber-500 rotate-2 translate-y-[80px]  flex">
+        </div>
+        {/* third */}
+        
+        <div className="w-[100vw] h-[25vh] max-md:h-[20vh] bg-amber-500 rotate-2 translate-y-[80px]  flex">
           <div className="w-[20%] pattern-1"></div>
           <div className="w-[80%]  gradient-3  py-4 flex justify-between flex-col">
             <div className="w-full h-[2px] bg-white"></div>
-            <div className="flex justify-around text-[42px] font-semibold">
+            <div className="flex justify-around text-[42px] max-md:text-[24px] font-semibold">
               <div>KHELEGA</div>
               <div>FREE FIRE</div>
               <div>?????</div>
