@@ -10,7 +10,7 @@ const OpeningAnimation = () => {
     setTimeout(() => {
       setShowAnimation(false);
       navigate("/");
-    }, 3000); // Smooth transition duration
+    }, 2500); // Smooth transition duration
   }, [navigate]);
 
   return (
