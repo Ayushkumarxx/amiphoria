@@ -17,6 +17,7 @@ function ImageCard({ name, imageUrl }) {
 }
 
 const Events = () => {
+  //for section 1
   const Culturalimages = [
     {
       name: "Astha Gill",
@@ -45,6 +46,52 @@ const Events = () => {
     },
   ];
 
+  // for section 4
+  const items = ["", "", "Football", "Cricket", "Badminton", "Chess", "", ""];
+  // for section 4
+  const eventData = [
+    {
+      title: "JOIN THE",
+      image:
+        "https://assetsio.gnwcdn.com/chess-playing-hand.jpeg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+      text: "MARCH/ 19",
+      reverse: false,
+    },
+    {
+      title: "FUN AT AMITY",
+      image:
+        "https://media.istockphoto.com/id/177427917/photo/close-up-of-red-cricket-ball-and-bat-sitting-on-grass.jpg?s=612x612&w=0&k=20&c=DcorerbBUeDNTfld3OclgHxCty4jih2yDCzipffX6zw=",
+      text: "3 DAYS",
+      reverse: true,
+    },
+    {
+      title: "AMIPHORIA 2025",
+      image:
+        "https://www.nbc.com/sites/nbcblog/files/styles/scale_862/public/2024/07/paris-2024-olympics-soccer.jpg",
+      text: "10+ GAMES",
+      reverse: false,
+    },
+  ];
+
+  const EventSection = ({ title, image, text, reverse }) => (
+    <div
+      className={`flex w-full h-[30vh] ${reverse ? "flex-row-reverse" : ""}`}
+    >
+      <div className="w-[50%] h-full flex justify-center items-center text-[62px] max-md:text-[32px] p-4 font-semibold">
+        {title}
+      </div>
+      <div className="w-[50%] h-full relative">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover grayscale brightness-75"
+        />
+        <p className="absolute top-1/2 left-1/2 text-[62px] max-md:text-[32px] -translate-x-1/2 -translate-y-1/2 text-outline text-white font-bold ">
+          {text}
+        </p>
+      </div>
+    </div>
+  );
   return (
     <div className="relative h-screen w-full overflow-y-auto overflow-x-hidden">
       {/* Section 1 */}
@@ -154,7 +201,6 @@ const Events = () => {
 
       {/* Section 3 */}
       <section className="h-[110vh] w-full bg-[#F24638] sticky top-0 z-30 flex flex-col justify-between py-10">
-
         {/* header */}
         <div className="flex w-full justify-between items-center  text-white font-semibold px-10 max-md:px-2 ">
           <div className="flex items-center gap-2">
@@ -175,21 +221,21 @@ const Events = () => {
             CINEMA <br />
             ART <br /> DESIGN <br /> COMMUNICATION
           </div>
-          <div className="text-7xl max-md:text-3xl font-bold text-[#E8A7A3] ">MINIMAL</div>
+          <div className="text-7xl max-md:text-3xl font-bold text-[#E8A7A3] ">
+            MINIMAL
+          </div>
           <div className="text-7xl max-md:text-3xl font-bold">FEES</div>
         </div>
 
         {/* second section */}
         <div className="flex justify-between items-end text-white ">
           <div className="text-7xl max-md:text-3xl font-bold">DEBATE.</div>
-            {/* big screen  */}
+          {/* big screen  */}
           <div className="text-[16px] max-md:hidden text-zinc-900 ">
             AMITY-UNIVERSITY-JHARKHAND
           </div>
           {/* small screen */}
-          <div className="text-[12px] text-zinc-900 md:hidden ">
-            AMITY
-          </div>
+          <div className="text-[12px] text-zinc-900 md:hidden ">AMITY</div>
           <div className="text-7xl max-md:text-3xl font-bold text-right">
             <span className="text-[#F78939]">CINEMA.</span> ART. <br />
             PANCHAYAT.
@@ -201,73 +247,27 @@ const Events = () => {
 
       {/* Section 4 */}
       <section className="h-[110vh] w-full bg-[#DEDEDE] sticky top-0 z-40 ">
-        <div className="flex w-full h-[10vh] justify-between items-center  text-black font-semibold px-10 ">
+        <div className="flex w-full h-[10vh] justify-between items-center  text-black font-semibold px-10 max-md:px-2 ">
           <div className="flex items-center gap-2">
             {" "}
             <MdOutlineElectricBolt /> THE SPORT <br />
             EVENT
           </div>
 
-          <div></div>
-          <div></div>
-          <div>Football</div>
-          <div>Cricket</div>
-          <div>Bandminton</div>
-          <div>Chess</div>
-          <div></div>
-          <div></div>
+          {items.map((item, index) => (
+            <div key={index} className="max-md:hidden">
+              {item}
+            </div>
+          ))}
+
           <div className="p-2 border-[1px] border-black rounded-[100px]">
             Get Registered
           </div>
         </div>
 
-        <div className="flex w-full h-[30vh] ">
-          <div className="w-[50%] h-full flex justify-center items-center text-[62px] font-semibold ">
-            JOIN THE
-          </div>
-          <div className="w-[50%] h-full relative">
-            <img
-              src="https://assetsio.gnwcdn.com/chess-playing-hand.jpeg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp"
-              alt=""
-              className="w-full h-full object-cover  grayscale brightness-75"
-            />
-            <p className="absolute top-1/2 left-1/2 text-[62px] -translate-x-1/2 -translate-y-1/2 text-outline-white font-bold font-sans">
-              MARCH/ 19
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-row-reverse w-full h-[30vh] ">
-          <div className="w-[50%] h-full flex justify-center items-center text-[62px] font-semibold ">
-            FUN AT AMITY
-          </div>
-          <div className="w-[50%] h-full relative">
-            <img
-              src="https://media.istockphoto.com/id/177427917/photo/close-up-of-red-cricket-ball-and-bat-sitting-on-grass.jpg?s=612x612&w=0&k=20&c=DcorerbBUeDNTfld3OclgHxCty4jih2yDCzipffX6zw="
-              alt=""
-              className="w-full h-full object-cover  grayscale brightness-75"
-            />
-            <p className="absolute top-1/2 left-1/2 text-[62px] -translate-x-1/2 -translate-y-1/2 text-outline-white font-bold font-sans">
-              3 DAYS
-            </p>
-          </div>
-        </div>
-
-        <div className="flex  w-full h-[30vh] ">
-          <div className="w-[50%] h-full flex justify-center items-center text-[62px] font-semibold ">
-            AMIPHORIA 2025
-          </div>
-          <div className="w-[50%] h-full relative">
-            <img
-              src="https://www.nbc.com/sites/nbcblog/files/styles/scale_862/public/2024/07/paris-2024-olympics-soccer.jpg"
-              alt=""
-              className="w-full h-full object-cover  grayscale brightness-75"
-            />
-            <p className="absolute top-1/2 left-1/2 text-[62px] -translate-x-1/2 -translate-y-1/2 text-outline-white font-bold font-sans">
-              10+ GAMES
-            </p>
-          </div>
-        </div>
+        {eventData.map((event, index) => (
+          <EventSection key={index} {...event} />
+        ))}
       </section>
 
       {/* section 5 */}
