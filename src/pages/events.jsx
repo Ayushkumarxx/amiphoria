@@ -99,19 +99,19 @@ const Events = () => {
       {/* Section 2 */}
       <section className="h-[105vh] w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center">
         {/* plane img */}
-        <div className="w-[150px] h-[150px] absolute top-[50px] right-[130px] rotate-[30deg]">
+        <div className="w-[150px] h-[150px] max-md:w-[80px] max-md:h-[80px] absolute top-[50px] right-[130px] rotate-[30deg]">
           <img src={plane} alt="" className="w-full h-full object-contain" />
         </div>
 
         {/* double slash */}
 
-        <div className="w-[100px] h-[100px] absolute bottom-[50px] left-[120px]  flex">
+        <div className="w-[100px] h-[100px] max-md:w-[80px] max-md:h-[80px]  absolute bottom-[50px] max-md:bottom-[80px] left-[120px]  flex">
           <img src={slash} alt="" className="w-full h-full object-contain" />
           <img src={slash} alt="" className="w-full h-full object-contain" />
         </div>
 
         <div className="flex ">
-          <h1 class="text-[72px] max-md:text-[36px] font-[500] text-outline  text-nowrap">
+          <h1 class="text-[72px] max-md:text-[42px] font-[500] text-outline  text-nowrap">
             Coding Events Tech Digital Fest Event Coding Debugging Memes
           </h1>
         </div>
@@ -121,7 +121,7 @@ const Events = () => {
         <div className="w-screen h-[1px] bg-black my-8"></div>
 
         <div className="flex ">
-          <h1 class="text-[72px] max-md:text-[36px] font-bold  text-nowrap">
+          <h1 class="text-[72px] max-md:text-[42px] font-bold  text-nowrap">
             Fest Event Coding Debugging Memes Coding Events Tech Digital
           </h1>
         </div>
@@ -130,11 +130,13 @@ const Events = () => {
         <div className="w-screen h-[1px] bg-black my-8"></div>
 
         <div className="flex relative ">
-          <h1 class="text-[72px] max-md:text-[36px] font-[500] text-outline  text-nowrap ">
+          <h1 class="text-[72px] max-md:text-[42px] font-[500] text-outline  text-nowrap ">
             Tech Podcast Hackathon Coding Debugging Memes Coding Events
           </h1>
 
-          <div className="w-[150px] h-[150px] absolute bottom-[-80px] right-[400px] rotate-[30deg]">
+          {/* button */}
+
+          <div className="w-[150px] h-[150px] max-md:w-[100px] max-md:h-[100px] absolute bottom-[-80px] right-[400px] rotate-[30deg]">
             <div className="relative w-full h-full">
               <img
                 src={octagon}
@@ -142,7 +144,7 @@ const Events = () => {
                 className="w-full h-full object-contain"
               />
 
-              <p className="absolute inset-0 flex items-center justify-center text-white font-bold">
+              <p className="absolute inset-0 flex items-center justify-center text-white font-bold max-md:text-[14px]">
                 Join now
               </p>
             </div>
