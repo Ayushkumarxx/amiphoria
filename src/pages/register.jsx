@@ -8,10 +8,10 @@ const EventCard = ({ number, title, events, imageSrc }) => {
   return (
     <div className="flex flex-col mt-[100px] max-md:mt-[60px]" >
       <div className="w-full py-2.5 flex">
-        <div className="w-[50%] max-md:w-[20%] flex justify-center items-center text-white font-bold text-[18px]">
+        <div className="w-[50%] max-md:w-[20%] flex justify-center max-md:justify-start items-center text-white font-bold text-[18px]">
           {number}
         </div>
-        <div className="w-[50%] max-md:w-[80%] border-b-[2px] border-b-white flex justify-between items-center py-2">
+        <div className="w-[50%] max-md:w-[80%] border-b-[2px] border-b-white flex justify-between items-center py-2 max-md:gap-2">
           <div className="text-white text-[18px]  font-semibold">{title}</div>
           <div className="text-zinc-200 text-[18px] max-md:text-[14px]">
             {events.map((event, index) => (
@@ -210,11 +210,11 @@ const Register = () => {
        {/* third section */}
       <div className="bg-[#E5DDC9] py-[20px] ">
         <div className="max-w-[1250px] mx-auto mt-[200px] p-2.5">
-          <div className="text-[122px] max-md:text-[52px] font-semibold leading-0">
+          <div className="text-[122px] max-md:text-[46px] font-semibold leading-none">
             Register Now*
           </div>
           <div className="flex justify-between items-center my-[100px]">
-            <div className="text-[52px] max-md:text-[24px] font-semibold">
+            <div className="text-[52px] max-md:text-[18px] font-semibold">
               SELECT AN EVENT AND <br /> JOIN NOW
             </div>
             <div className="w-[80px] max-md:w-[60px] h-[80px] max-md:h-[60px] rounded-[100px] bg-black flex justify-center items-center text-white text-[42px] max-md:text-[32px]">
