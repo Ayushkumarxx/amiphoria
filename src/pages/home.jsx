@@ -36,8 +36,12 @@ const EventCard = ({ img, date, title }) => {
         className="w-full h-[85%] max-md:h-[65%] object-cover grayscale-100"
       />
       <div className="w-full flex flex-col p-4 justify-between">
-        <p className="text-[16px] max-md:text-[14px] font-bold text-zinc-200 mt-4">{date}</p>
-        <p className="text-[22px] max-md:text=[18px] font-bold text-[#fff]">{title}</p>
+        <p className="text-[16px] max-md:text-[14px] font-bold text-zinc-200 mt-4">
+          {date}
+        </p>
+        <p className="text-[22px] max-md:text=[18px] font-bold text-[#fff]">
+          {title}
+        </p>
       </div>
     </div>
   );
@@ -53,7 +57,9 @@ const TicketCard = ({ eventTitle, eventTitle2 }) => {
 
       {/* Event Details */}
       <div className="flex flex-col justify-between p-4 w-[90%]">
-        <div className="text-[18px] max-md:text-[12px]   font-semibold">Thrusday-Friday</div>
+        <div className="text-[18px] max-md:text-[12px]   font-semibold">
+          Thrusday-Friday
+        </div>
         <div className="text-[32px] max-md:text-[24px] leading-[20px]">
           <span className="text-outline font-sans">{eventTitle}</span>{" "}
           {eventTitle2}
@@ -144,7 +150,11 @@ const TicketCard2 = ({ img, h, w, hidden }) => {
       style={{ height: `${h}%`, width: `${w}%` }}
     >
       <div className="w-full h-[75%] relative overflow-hidden rounded-lg">
-        <img src={img} alt="Ticket" className="w-full h-full object-cover grayscale" />
+        <img
+          src={img}
+          alt="Ticket"
+          className="w-full h-full object-cover grayscale"
+        />
       </div>
 
       <div className="flex justify-between items-center mt-4">
@@ -254,9 +264,10 @@ const Home = () => {
       </div>
       {/* events section */}
       <div className="nt-events  w-full bg-[#151515] pt-[100px] pb-[50px] flex flex-col items-center  ">
-
         {/* heading */}
-        <p className="text-[16px] font-bold text-[#fff] max-md:text-[12px] ">Amiphoria Events </p>
+        <p className="text-[16px] font-bold text-[#fff] max-md:text-[12px] ">
+          Amiphoria Events{" "}
+        </p>
 
         {/* super head */}
         <h2 className="text-[62px] max-md:text-[32px] font-extrabold text-[#fff] mt-2">
@@ -279,7 +290,9 @@ const Home = () => {
         <div className="w-[120vw] h-[60px] max-md:h-[50px] bg-[#EF64FE] mt-20 flex items-center justify-between rotate-2  -translate-x-10 origin-center gap-[30px]">
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
-              <div className="text-[24px] max-md:text-[16px]  font-bold text-[#fff]">Join</div>
+              <div className="text-[24px] max-md:text-[16px]  font-bold text-[#fff]">
+                Join
+              </div>
               <img src={sparkle} alt="" className="w-[40px] max-md:w-[25px]" />
             </div>
           ))}
@@ -287,13 +300,14 @@ const Home = () => {
         <div className="w-[120vw] h-[60px]  max-md:h-[50px] bg-[#8B1E1E] mt-4 flex items-center justify-between -rotate-4 origin-left translate-x-10 gap-[30px]">
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
-              <div className="text-[24px] max-md:text-[16px] font-bold text-[#fff]">Fast</div>
+              <div className="text-[24px] max-md:text-[16px] font-bold text-[#fff]">
+                Fast
+              </div>
               <img src={sparkle} alt="" className="w-[40px] max-md:w-[20px]" />
             </div>
           ))}
         </div>
       </div>
-   
 
       {/* what is amiphoria  */}
       <div className="nt-whatfor w-full h-[700px] flex flex-col justify-center items-center bg-[#B4FF52] text-center p-2.5">
@@ -322,10 +336,11 @@ const Home = () => {
           <img
             src={music}
             alt=""
-            className="absolute bottom-[-100px] max-md:bottom-[-50px] right-[0px] max-md:right-[10%] w-[120px] rotate-[10deg] max-md:w-[80px]"
+            className="absolute bottom-[-100px] max-md:bottom-[-80px] right-[0px] max-md:right-[10%] w-[120px] rotate-[10deg] max-md:w-[60px]"
           />
         </div>
       </div>
+
       {/* dates section */}
       <div className="nt-dates flex justify-between py-[150px] max-w-[1050px] mx-auto h-[700px] ">
         {/* first */}
@@ -335,7 +350,7 @@ const Home = () => {
             <img
               src={circle}
               alt=""
-              className="absolute top-[-250px] max-md:top-[-100px]  left-[-100px] max-md:left-[-40px] h-[600px] max-md:h-[250px] "
+              className="absolute top-[-250px] max-md:top-[-100px]  left-[-100px] max-md:left-[-10px] h-[600px] max-md:h-[250px] "
             />
           </div>
 
@@ -363,7 +378,9 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col gap-4 ">
-            <p className="text-[18px] max-md:text-[14px] font-bold">follow us on</p>
+            <p className="text-[18px] max-md:text-[14px] font-bold">
+              follow us on
+            </p>
 
             <div className="flex gap-6 flex-wrap">
               {socialLinks.map(({ icon, name }, index) => (
@@ -379,8 +396,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-         {/* divider section */}
-         <div className="w-full h-[850px]  flex flex-col justify-between py-20  ">
+
+      {/* divider section */}
+      <div className="w-full h-[850px]  flex flex-col justify-between py-20  ">
         <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2">
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
           <TicketCard eventTitle={"TECH"} eventTitle2={"FEST"} />
@@ -406,11 +424,10 @@ const Home = () => {
       {/* tickets section */}
 
       <div className="bg-[#F2ECE7] py-20 ">
-
         {/* first section */}
         <div className="border-[2px] border-black h-[450px] max-md:h-auto w-full flex  max-md:flex-col">
-          <TicketCard2 img={fest} h={"100"} w={"30"} hidden={true}/>
-          <TicketCard2 img={fest} h={"100"} w={"100"} hidden={false}/>
+          <TicketCard2 img={fest} h={"100"} w={"30"} hidden={true} />
+          <TicketCard2 img={fest} h={"100"} w={"100"} hidden={false} />
           <div className="h-full w-[40%] max-md:w-full p-6 flex flex-col items-center  border-r-[2px] max-md:border-r-0 max-md:border-t-[2px]  border-black border-l-[2px] max-md:border-l-0 ">
             <h2 className="text-[42px] font-bold">JOIN US</h2>
             <p className="text-[24px] font-semibold text-center ">
@@ -425,17 +442,14 @@ const Home = () => {
               students across india
             </p>
           </div>
-      
-          <TicketCard2 img={event1} h={"100"} w={"30"} hidden={true}/>
-    
-          
+
+          <TicketCard2 img={event1} h={"100"} w={"30"} hidden={true} />
         </div>
 
         <div className="text-[152px] max-md:text-[42px] font-bold text-center mt-[20px]">
           AMIPHORIA 2K25
         </div>
       </div>
-      
 
       <Footer />
     </div>
