@@ -111,7 +111,7 @@ const Events = () => {
         </div>
 
         <div className="flex ">
-          <h1 class="text-[72px] max-md:text-[42px] font-[500] text-outline  text-nowrap">
+          <h1 class="text-[72px] max-md:text-[42px] font-[500] max-md:font-semibold text-outline  text-nowrap">
             Coding Events Tech Digital Fest Event Coding Debugging Memes
           </h1>
         </div>
@@ -130,7 +130,7 @@ const Events = () => {
         <div className="w-screen h-[1px] bg-black my-8"></div>
 
         <div className="flex relative ">
-          <h1 class="text-[72px] max-md:text-[42px] font-[500] text-outline  text-nowrap ">
+          <h1 class="text-[72px] max-md:text-[42px] font-[500] max-md:font-semibold text-outline  text-nowrap ">
             Tech Podcast Hackathon Coding Debugging Memes Coding Events
           </h1>
 
