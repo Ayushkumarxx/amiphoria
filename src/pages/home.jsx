@@ -354,13 +354,13 @@ const Home = () => {
             />
           </div>
 
-          <div className="text-[22px] max-md:text-[16px] font-bold relative">
+          <div className="text-[22px] max-md:text-[14px] font-bold relative">
             At Amity <br />
             University Jharkhand
             <img
               src={king}
               alt=""
-              className="absolute top-[-50px] max-md:top-[-60px] left-[-100px] max-md:left-[-10px] h-[50px] rotate-[-30deg]"
+              className="absolute top-[-50px] max-md:top-[-60px] left-[-100px] max-md:left-[10px] h-[50px] max-md:h-[30px] rotate-[-30deg]"
             />
           </div>
         </div>
@@ -386,7 +386,7 @@ const Home = () => {
               {socialLinks.map(({ icon, name }, index) => (
                 <div
                   key={index}
-                  className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-6 max-md:h-6"
+                  className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-5 max-md:h-5"
                   title={name}
                 >
                   {icon}
