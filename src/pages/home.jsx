@@ -24,12 +24,18 @@ import { FaFacebook, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
+import { Link, Route } from "react-router-dom";
 import useNavigation from "../utils/navigation";
 import Routes from "../utils/routes";
+import { link } from "framer-motion/client";
 
 const EventCard = ({ img, date, title }) => {
+  const navigateTo = useNavigation();
   return (
-    <div className="flex flex-col w-[280px] max-md:w-[80%] h-[400px] max-md:h-[300px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] ">
+    <div
+      className="flex flex-col w-[280px] max-md:w-[80%] h-[400px] max-md:h-[300px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] cursor-pointer  hover:scale-102 transition-all duration-200 ease-in-out"
+      onClick={() => navigateTo(Routes.Events)}
+    >
       <img
         src={img}
         alt=""
@@ -48,8 +54,12 @@ const EventCard = ({ img, date, title }) => {
 };
 
 const TicketCard = ({ eventTitle, eventTitle2 }) => {
+  const navigateTo = useNavigation();
   return (
-    <div className="flex p-2 h-[90%] max-md:h-[80%] w-[30%] max-md:w-[250px] bg-[#EFDBD0] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] shrink-0">
+    <div
+      className="flex p-2 h-[90%] max-md:h-[80%] w-[30%] max-md:w-[250px] bg-[#EFDBD0] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] shrink-0 cursor-pointer hover:scale-102 transition-all duration-200 ease-in-out"
+      onClick={() => navigateTo(Routes.Register)}
+    >
       {/* Vertical Text */}
       <div className="text-[12px] bg-black text-white w-[20px] h-full flex items-center justify-center writing-mode-vertical-rl">
         JOIN THE FUN NOW
@@ -80,60 +90,86 @@ const TicketCard = ({ eventTitle, eventTitle2 }) => {
 };
 
 const Footer = () => {
+  const navigateTo = useNavigation();
   return (
     <footer className="w-full bg-[#8B1E1E] text-white py-10 px-6 md:px-20">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Menu Section */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Menu</h3>
-          <ul className="space-y-1 text-sm">
-            <li>About</li>
-            <li>Props</li>
-            <li>Interiors</li>
-            <li>Themed Decors</li>
-            <li>Caravans</li>
-          </ul>
+          <div className="space-y-1 text-sm">
+            <Link
+              to="/"
+              className="block text-sm text-white hover:translate-x-0.5 transition-all duration-150 ease-in-out"
+            >
+              Home
+            </Link>
+            <Link
+              to="/events"
+              className="block text-sm text-white hover:translate-x-0.5 transition-all duration-150 ease-in-out"
+            >
+              Events
+            </Link>
+            <Link
+              to="/update"
+              className="block text-sm text-white hover:translate-x-0.5 transition-all duration-150 ease-in-out"
+            >
+              Updates
+            </Link>
+            <Link
+              to="/team"
+              className="block text-sm text-white hover:translate-x-0.5 transition-all duration-150 ease-in-out"
+            >
+              Team
+            </Link>
+            <Link
+              to="/reg"
+              className="block text-sm text-white hover:translate-x-0.5 transition-all duration-150 ease-in-out"
+            >
+              Register
+            </Link>
+          </div>
         </div>
 
         {/* Contact Section */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Get In Touch</h3>
-          <p className="text-sm">+91-9844031239</p>
-          <p className="text-sm">srikanth@filmdecors.com</p>
+          <p className="text-sm">+91-8210685150</p>
+          <p className="text-sm">ayushkumar09005@gmail.com</p>
 
           <h3 className="text-lg font-semibold mt-4 mb-2">Address</h3>
           <p className="text-sm">
-            #3, Survey No. 15/B, Maduravoyal <br />
-            Porur Bye Pass Service Road, <br />
-            Vanagaram, Chennai - 600095
+          Hec core area, near railway crossing, <br />
+           pundag , ranchi , <br /> jharkhand 834001
           </p>
         </div>
 
         {/* Opening Time */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Opening Time</h3>
+          <h3 className="text-lg font-semibold mb-3">EventTime</h3>
           <p className="text-sm">
-            <span className="font-semibold">Mon-Sat:</span> 8:00 am - 7:00 pm
+            <span className="font-semibold">Thu-Friday:</span> 9:00 am - 6:00 pm
           </p>
           <p className="text-sm">
-            <span className="font-semibold">Sun:</span> 8:00 am - 2:00 pm
+            <span className="font-semibold"> Get ready</span> for the events
           </p>
         </div>
 
         {/* About Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">About Film Decors Co.</h3>
+          <h3 className="text-lg font-semibold mb-3">About Amiphoria.</h3>
           <p className="text-sm">
-            Filmdecors are the major prop suppliers for over 22 years to the
-            Film, Television, Theatre, and Event industry in South India.
+            Amiphoria is a yearly event organized at Amity University
+            Jharkhand. We aim to bring together like-minded individuals from
+            various fields to create a vibrant and inclusive community.
           </p>
 
           {/* Social Buttons */}
           <div className="flex gap-3 mt-4">
-            <button className="border border-white px-3 py-1 rounded-full text-sm">
+            <button className="border border-white px-3 py-1 rounded-full text-sm cursor-pointer" onClick={() => navigateTo(Routes.Insta , true)}>
               Instagram
             </button>
-            <button className="border border-white px-3 py-1 rounded-full text-sm">
+            <button className="border border-white px-3 py-1 rounded-full text-sm cursor-pointer" onClick={() => navigateTo(Routes.LinkedIn , true)}>
               LinkedIn
             </button>
           </div>
@@ -144,6 +180,7 @@ const Footer = () => {
 };
 
 const TicketCard2 = ({ img, h, w, hidden }) => {
+  const navigateTo = useNavigation();
   return (
     <div
       className={`p-8 ${hidden ? "max-md:hidden" : "md:hidden"}`}
@@ -165,7 +202,10 @@ const TicketCard2 = ({ img, h, w, hidden }) => {
           </span>
         </div>
 
-        <div className="w-[50px] h-[50px] rounded-full border-2 border-black flex justify-center items-center text-black text-[42px]">
+        <div
+          className="w-[50px] h-[50px] rounded-full border-2 border-black flex justify-center items-center text-black text-[42px] cursor-pointer hover:bg-black hover:text-white "
+          onClick={() => navigateTo(Routes.Events)}
+        >
           <GoArrowUpRight />
         </div>
       </div>
@@ -176,11 +216,11 @@ const TicketCard2 = ({ img, h, w, hidden }) => {
 const Home = () => {
   const navigateTo = useNavigation();
   const socialLinks = [
-    { icon: <FaInstagram />, name: "Instagram" },
+    { icon: <FaInstagram />, name: "Instagram", link: Routes.Insta },
     // { icon: <FaXTwitter />, name: "Twitter" },
-    { icon: <FaYoutube />, name: "YouTube" },
-    { icon: <FaFacebook />, name: "Facebook" },
-    { icon: <FaLinkedin />, name: "LinkedIn" },
+    { icon: <FaYoutube />, name: "YouTube" , link: Routes.Yt},
+    { icon: <FaFacebook />, name: "Facebook", link: Routes.FB},  
+    { icon: <FaLinkedin />, name: "LinkedIn", link: Routes.LinkedIn },
   ];
   return (
     <div className="overflow-x-hidden">
@@ -224,10 +264,16 @@ const Home = () => {
             </p>
 
             <div className="nt-buttons flex gap-2 mt-6">
-              <button className="bg-[#A9EB09] text-black py-[10px] max-md:py-[5px] px-[40px] max-md:px-[20px] max-md:text-[14px] rounded-[8px] font-semibold">
+              <button
+                className="bg-[#A9EB09] text-black py-[10px] max-md:py-[5px] px-[40px] max-md:px-[20px] max-md:text-[14px] rounded-[8px] font-semibold cursor-pointer hover:outline-[2px] hover:outline-black"
+                onClick={() => navigateTo(Routes.Register)}
+              >
                 Register Now
               </button>
-              <button className="bg-white text-black py-[10px] max-md:py-[5px] px-[40px] max-md:px-[20px] max-md:text-[14px]  rounded-[8px] font-semibold">
+              <button
+                className="bg-white text-black py-[10px] max-md:py-[5px] px-[40px] max-md:px-[20px] max-md:text-[14px]  rounded-[8px] font-semibold cursor-pointer hover:outline-[2px] hover:outline-black"
+                onClick={() => navigateTo(Routes.Register)}
+              >
                 Download Brochure
               </button>
             </div>
@@ -236,16 +282,16 @@ const Home = () => {
           {/* socials */}
 
           <div className="flex flex-col gap-10">
-            <div>
+            <div  className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.Insta, true)}>
               <FaInstagram className="text-3xl" />{" "}
             </div>
-            <div>
+            <div className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.Yt, true)}>
               {" "}
               <FaYoutube className="text-3xl" />
             </div>
-            <div>
+            <div className="cursor-pointer hover:scale-105 " onClick={() => navigateTo(Routes.FB, true)}>
               {" "}
-              <FaXTwitter className="text-3xl" />
+              <FaFacebook className="text-3xl" />
             </div>
           </div>
         </div>
@@ -383,11 +429,12 @@ const Home = () => {
             </p>
 
             <div className="flex gap-6 max-md:gap-4 flex-wrap">
-              {socialLinks.map(({ icon, name }, index) => (
+              {socialLinks.map(({ icon, name, link }, index) => (
                 <div
                   key={index}
-                  className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-5 max-md:h-5"
+                  className="text-[18px] max-md:text-[16px] text-zinc-900 rounded-full bg-gray-200 flex items-center justify-center w-10 h-10 max-md:w-5 max-md:h-5 cursor-pointer"
                   title={name}
+                  onClick={() => navigateTo(link, true)}
                 >
                   {icon}
                 </div>

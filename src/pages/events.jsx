@@ -3,6 +3,8 @@ import { Navbar } from "../components/index";
 import { octagon, plane, slash } from "../assets/index";
 import { MdOutlineElectricBolt } from "react-icons/md";
 import { SiYoutubegaming } from "react-icons/si";
+import useNavigation from "../utils/navigation";
+import Routes from "../utils/routes";
 function ImageCard({ name, imageUrl }) {
   return (
     <div className="flex flex-col items-center max-md:mb-2.5">
@@ -15,14 +17,32 @@ function ImageCard({ name, imageUrl }) {
     </div>
   );
 }
+const EventSection = ({ title, image, text, reverse }) => (
+  <div className={`flex w-full h-[30vh] ${reverse ? "flex-row-reverse" : ""}`}>
+    <div className="w-[50%] h-full flex justify-center items-center text-[62px] max-md:text-[26px] p-4 font-semibold">
+      {title}
+    </div>
+    <div className="w-[50%] h-full relative">
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-full object-cover grayscale brightness-75"
+      />
+      <p className="absolute top-1/2 left-1/2 text-[62px] max-md:text-[32px] -translate-x-1/2 -translate-y-1/2 text-outline text-white font-bold ">
+        {text}
+      </p>
+    </div>
+  </div>
+);
 
 const Events = () => {
+  const navigateTo = useNavigation();
   //for section 1
   const Culturalimages = [
     {
       name: "Astha Gill",
       imageUrl:
-        "https://upload.wikimedia.org/wikipedia/commons/0/02/Aastha_Gill_Live_Show.jpg",
+        "https://s3images.zee5.com/wp-content/uploads/sites/7/2021/10/Untitled-design-2021-10-04T182508.184.jpg",
     },
     {
       name: "Asees Kaur",
@@ -73,25 +93,6 @@ const Events = () => {
     },
   ];
 
-  const EventSection = ({ title, image, text, reverse }) => (
-    <div
-      className={`flex w-full h-[30vh] ${reverse ? "flex-row-reverse" : ""}`}
-    >
-      <div className="w-[50%] h-full flex justify-center items-center text-[62px] max-md:text-[26px] p-4 font-semibold">
-        {title}
-      </div>
-      <div className="w-[50%] h-full relative">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover grayscale brightness-75"
-        />
-        <p className="absolute top-1/2 left-1/2 text-[62px] max-md:text-[32px] -translate-x-1/2 -translate-y-1/2 text-outline text-white font-bold ">
-          {text}
-        </p>
-      </div>
-    </div>
-  );
   return (
     <div className="relative h-screen w-full overflow-y-auto overflow-x-hidden">
       {/* Section 1 */}
@@ -118,7 +119,10 @@ const Events = () => {
             ))}
           </div>
 
-          <h1 class="text-6xl max-md:text-3xl font-bold text-outline mt-10 font-sans">
+          <h1
+            class="text-6xl max-md:text-3xl font-bold text-outline mt-10 font-sans cursor-pointer hover:text-[#504D00]"
+            onClick={() => navigateTo(Routes.Register)}
+          >
             TAKE PART
           </h1>
         </div>
@@ -159,7 +163,7 @@ const Events = () => {
 
         <div className="flex ">
           <h1 class="text-[72px] max-md:text-[48px] font-[500] max-md:font-semibold text-outline  text-nowrap">
-            Coding Events Tech Digital Fest Event Coding Debugging Memes
+            Coding Events Tech Fest Podcast Event Coding Debugging Memes
           </h1>
         </div>
 
@@ -169,7 +173,7 @@ const Events = () => {
 
         <div className="flex ">
           <h1 class="text-[72px] max-md:text-[48px] font-bold  text-nowrap">
-            Fest Event Coding Debugging Memes Coding Events Tech Digital
+            Fest Event Coding Tech Memes Coding Events Tech Digital
           </h1>
         </div>
         {/* divider */}
@@ -184,7 +188,10 @@ const Events = () => {
           {/* button */}
 
           <div className="w-[150px] h-[150px] max-md:w-[120px] max-md:h-[120px] absolute bottom-[-80px] right-[400px] rotate-[30deg]">
-            <div className="relative w-full h-full">
+            <div
+              className="relative w-full h-full cursor-pointer"
+              onClick={() => navigateTo(Routes.Register)}
+            >
               <img
                 src={octagon}
                 alt=""
@@ -207,7 +214,12 @@ const Events = () => {
             {" "}
             <MdOutlineElectricBolt /> Acedmic Event
           </div>
-          <div>Get Registered</div>
+          <div
+            className="cursor-pointer hover:scale-105"
+            onClick={() => navigateTo(Routes.Register)}
+          >
+            Get Registered
+          </div>
         </div>
 
         {/* first section */}
@@ -222,9 +234,9 @@ const Events = () => {
             ART <br /> DESIGN <br /> COMMUNICATION
           </div>
           <div className="text-7xl max-md:text-3xl font-bold text-[#E8A7A3] ">
-            MINIMAL
+            ACEDMIC
           </div>
-          <div className="text-7xl max-md:text-3xl font-bold">FEES</div>
+          <div className="text-7xl max-md:text-3xl font-bold">FEST</div>
         </div>
 
         {/* second section */}
@@ -260,7 +272,7 @@ const Events = () => {
             </div>
           ))}
 
-          <div className="p-2 border-[1px] border-black rounded-[100px]">
+          <div className="p-2 border-[1px] border-black rounded-[100px] cursor-pointer  hover:bg-black hover:text-white" onClick={() => navigateTo(Routes.Register)}>
             Get Registered
           </div>
         </div>
@@ -278,7 +290,7 @@ const Events = () => {
             {" "}
             <MdOutlineElectricBolt /> Esport Event
           </div>
-          <div>Get Registered</div>
+          <div className="cursor-pointer hover:scale-105" onClick={() => navigateTo(Routes.Register)}>Get Registered</div>
         </div>
 
         {/* first */}
@@ -314,7 +326,7 @@ const Events = () => {
           <div className="w-[20%] pattern-1"></div>
         </div>
         {/* third */}
-        
+
         <div className="w-[100vw] h-[25vh] max-md:h-[20vh] bg-amber-500 rotate-2 translate-y-[80px]  flex">
           <div className="w-[20%] pattern-1"></div>
           <div className="w-[80%]  gradient-3  py-4 flex justify-between flex-col">

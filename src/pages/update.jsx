@@ -6,14 +6,13 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa6";
+import useNavigation from "../utils/navigation";
+import Routes from "../utils/routes";
 const Update = () => {
 
-  const socialLinks = [
-    { icon: <FaFacebook />, name: "Facebook" },
-    { icon: <FaInstagram />, name: "Instagram" },
-    { icon: <FaLinkedin />, name: "Linkedin" },
-    { icon: <FaYoutube />, name: "Youtube" },
-  ];
+  const navigateTo = useNavigation();
+
+
   
   return (
     <section className="w-full h-screen max-md:h-auto bg-[#EC4B1B]">
@@ -40,19 +39,19 @@ const Update = () => {
           </div>
 
           <div className="flex gap-5 mt-[30px]">
-            <div className="flex items-center gap-1 text-[18px]  w-[150px] max-md:w-[120px]">
+            <div className="flex items-center gap-1 text-[18px]  w-[150px] max-md:w-[120px]  cursor-pointer" onClick={() => navigateTo(Routes.FB, true)}>
               <FaFacebook /> Facebook
             </div>
-            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[120px]">
+            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[120px] cursor-pointer" onClick={() => navigateTo(Routes.Insta, true)}>
               <FaInstagram /> Instagram
             </div>
           </div>
           <div className="flex gap-5 mt-[10px]">
-            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[120px]">
+            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[120px] cursor-pointer" onClick={() => navigateTo(Routes.LinkedIn, true)}>
               {" "}
               <FaLinkedin /> Linkedin
             </div>
-            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[100px]">
+            <div className="flex items-center gap-1 text-[18px] w-[150px] max-md:w-[100px] cursor-pointer" onClick={() => navigateTo(Routes.Yt, true)}>
               <FaYoutube /> Youtube
             </div>
           </div>

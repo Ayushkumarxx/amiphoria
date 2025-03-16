@@ -5,7 +5,11 @@ const Routes = {
     Team: "/team",
     Events: "/events",
     Update: "/update",
-    form: "https://forms.gle/qmoDv5EXDbdQ3p2Q6"
+    Form: "https://forms.gle/qmoDv5EXDbdQ3p2Q6",
+    Insta: "https://www.instagram.com/amiphoriaranchi2025/",
+    FB: "https://www.facebook.com/AmityUniversityRanchi/",
+    LinkedIn: "https://in.linkedin.com/school/amityuniversityranchi/",
+    Yt: "https://www.youtube.com/c/AmityUniversityJharkhand"
   };
   
   export default Routes;

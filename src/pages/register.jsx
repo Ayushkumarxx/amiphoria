@@ -3,8 +3,11 @@ import { HiSparkles } from "react-icons/hi";
 import { HiArrowDown } from "react-icons/hi2";
 import { GoArrowUpRight } from "react-icons/go";
 import { event1, event2, event3, event4, event5, fest } from "../assets/index";
+import useNavigation from "../utils/navigation";
+import Routes from "../utils/routes";
 
 const EventCard = ({ number, title, events, imageSrc }) => {
+ 
   return (
     <div className="flex flex-col mt-[100px] max-md:mt-[60px]" >
       <div className="w-full py-2.5 flex">
@@ -32,18 +35,19 @@ const EventCard = ({ number, title, events, imageSrc }) => {
 };
 
 const Register = () => {
+  const navigateTo = useNavigation();
   return (
     <>
       <div className="w-full h-screen max-md:h-auto bg-[#E5DDD4]  ">
 
         {/* nav head */}
         <div className="max-w-[1350px] mx-auto  h-[10%] max-md:h-[75px]   flex justify-between items-center border-b-[1px] border-b-black px-2.5">
-          <div className="text-[24px] ">Amiphoria</div>
+          <div className="text-[24px] cursor-pointer " onClick={() => navigateTo(Routes.Home)}>Amiphoria</div>
           <div className="flex gap-[8px] flex-col">
             <div className="w-[25px] h-[2px] bg-black"></div>
             <div className="w-[25px] h-[2px] bg-black"></div>
           </div>
-          <div className="text-[16px] px-[30px] py-[8px] bg-black text-white">
+          <div className="text-[16px] px-[30px] py-[8px] bg-black text-white cursor-pointer hover:outline-[1px] hover:outline-black hover:bg-transparent hover:text-black transition-all duration-200 ease-in" onClick={() => navigateTo(Routes.Form,true)}>
             Register
           </div>
         </div>
@@ -103,7 +107,7 @@ const Register = () => {
           <div className="w-[45%] max-md:w-full max-md:px-2.5 max-md:pb-[40px] flex flex-col justify-around items-center">
             <div className="text-[42px] max-md:text-[32px] font-semibold">
               Get your self registered <br />
-              <span className="text-[52px] max-md:text-[36px] text-[#F87037] font-serif">
+              <span className="text-[52px] max-md:text-[36px] text-[#8B1E1E] font-serif">
                 ASAP !
               </span>
             </div>
@@ -120,7 +124,7 @@ const Register = () => {
 
       {/* second section */}
 
-      <div className="bg-[#FE5004]  py-[40px] px-[16px]">
+      <div className="bg-[#8B1E1E]  py-[40px] px-[16px]">
         <h1 className="text-[36px] max-md:text-[24px]   text-white">
           Explore Amiophoria’s events and activities. <br />
           Stay updated on the latest happenings <br /> Join us to learn, grow,
@@ -217,7 +221,7 @@ const Register = () => {
             <div className="text-[52px] max-md:text-[18px] font-semibold">
               SELECT AN EVENT AND <br /> JOIN NOW
             </div>
-            <div className="w-[80px] max-md:w-[60px] h-[80px] max-md:h-[60px] rounded-[100px] bg-black flex justify-center items-center text-white text-[42px] max-md:text-[32px]">
+            <div className="w-[80px] max-md:w-[60px] h-[80px] max-md:h-[60px] rounded-[100px] bg-black flex justify-center items-center text-white text-[42px] max-md:text-[32px] cursor-pointer hover:bg-transparent hover:text-black hover:outline-1 hover:outline-black transition-all duration-200 ease-in-out" onClick={() => navigateTo(Routes.Form,true)}>
               <GoArrowUpRight />{" "}
             </div>
           </div>

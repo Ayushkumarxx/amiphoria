@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { logo } from "../assets/index";
+import useNavigation from "../utils/navigation";
+import Routes from "../utils/routes";
 
 const Navbar = () => {
+  const navigateTo = useNavigation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -21,13 +24,21 @@ const Navbar = () => {
     <nav className="flex max-w-[1350px] mx-auto justify-between items-center p-4 h-[75px] relative">
       {/* Logo */}
       <div className="h-full w-[120px]">
-        <img src={logo} alt="Logo" className="h-full w-full object-contain brightness-0" />
+        <img
+          src={logo}
+          alt="Logo"
+          className="h-full w-full object-contain brightness-0"
+        />
       </div>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-[50px] text-[18px] font-semibold">
         {navLinks.map(({ name, path }) => (
-          <Link key={name} to={path} className="hover:text-[#A9EB09] transition duration-300">
+          <Link
+            key={name}
+            to={path}
+            className="hover:text-[#A9EB09] transition duration-300"
+          >
             {name}
           </Link>
         ))}
@@ -35,7 +46,10 @@ const Navbar = () => {
 
       {/* Register Button */}
       <div className="hidden md:block">
-        <button className="bg-[#A9EB09] text-black py-[10px] px-[40px] rounded-[8px] font-semibold">
+        <button
+          className="bg-[#A9EB09] text-black py-[10px] px-[40px] rounded-[8px] font-semibold cursor-pointer hover:scale-[1.1] transition duration-300"
+          onClick={() => navigateTo(Routes.Register)}
+        >
           Register
         </button>
       </div>
@@ -77,7 +91,10 @@ const Navbar = () => {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3, delay: 0.5 }}
               className="bg-[#A9EB09] text-black py-3 px-8 rounded-[8px] font-semibold text-xl"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                navigateTo(Routes.Register);
+              }}
             >
               Register
             </motion.button>
