@@ -259,7 +259,7 @@ const Home = () => {
 
         <div className="scoialNText flex justify-between items-center max-md:mt-6.5">
           <div className="w-[50%] max-md:w-[85%]">
-            <p className="text-[18px] max-md:text-[14px] ">
+            <p className="text-[16px] max-md:text-[14px] ">
               Get ready for an electrifying blend of music, dance, fashion, and
               talent at Amity’s biggest cultural fest! With thrilling
               competitions, mesmerizing performances, and endless fun, Amiphoria
