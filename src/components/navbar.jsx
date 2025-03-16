@@ -55,7 +55,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <button className="md:hidden text-2xl z-[100]" onClick={toggleMenu}>
+      <button className="md:hidden text-2xl z-40" onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
