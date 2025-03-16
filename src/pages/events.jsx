@@ -150,6 +150,10 @@ const Events = () => {
       {/* Section 2 */}
       <section className="h-[105vh] max-md:h-screen w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center ">
         {/* plane img */}
+
+        <div className="hidden max-md:block w-[100px] h-[100px] absolute top-[40px]  left-[80px]  -rotate-[30deg] scale-x-[-1]">
+          <img src={plane} alt="" className="w-full h-full object-contain" />
+        </div>
         <div className="w-[150px] h-[150px] max-md:w-[100px] max-md:h-[100px] absolute top-[50px] max-md:top-[120px] right-[130px] max-md:right-[80px] rotate-[30deg]">
           <img src={plane} alt="" className="w-full h-full object-contain" />
         </div>
@@ -162,8 +166,8 @@ const Events = () => {
         </div>
 
         <div className="flex ">
-          <h1 class="text-[72px] max-md:text-[48px] font-[500] max-md:font-semibold text-outline  text-nowrap">
-            Coding Events Tech Fest Podcast Event Coding Debugging Memes
+          <h1 class="text-[72px] max-md:text-[48px] font-[600] max-md:font-semibold text-outline  text-nowrap">
+            Coding Events Podcast Tech Fest Event Coding Debugging Memes
           </h1>
         </div>
 
@@ -181,7 +185,7 @@ const Events = () => {
         <div className="w-screen h-[1px] bg-black my-8"></div>
 
         <div className="flex relative ">
-          <h1 class="text-[72px] max-md:text-[48px] font-[500] max-md:font-semibold text-outline  text-nowrap ">
+          <h1 class="text-[72px] max-md:text-[48px] font-[600] max-md:font-semibold text-outline  text-nowrap ">
             Tech Podcast Hackathon Coding Debugging Memes Coding Events
           </h1>
 
