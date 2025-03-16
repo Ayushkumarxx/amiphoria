@@ -4,7 +4,7 @@ import { heart, spon1, spon2, spon3, spon4, spon5 } from "../assets";
 
 const LogoDiv = ({ spon }) => {
   return (
-    <div className="w-[150px] h-[135px] rounded-[8px] overflow-hidden bg-[#E3DBD7]">
+    <div className="w-[200px] h-[150px] max-md:w-[150px] max-md:h-[135px] rounded-[8px] overflow-hidden bg-[#E3DBD7]">
       <img
         src={spon}
         alt=""
