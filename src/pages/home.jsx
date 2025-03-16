@@ -244,13 +244,13 @@ const Home = () => {
         </div>
         {/* head text */}
         <div className="nt-big-text flex max-md:flex-col justify-between items-center max-md:items-start  max-md:mt-10">
-          <div className="text-[162px] max-md:text-[56px] font-extrabold relative ">
+          <div className="text-[162px] max-xl:text-[122px] max-md:text-[56px] font-extrabold relative ">
             Amiphoria{" "}
             <span className="absolute text-[24px] max-md:text-[12px] left-[15px] top-[0px]">
               Mar 19-21/25
             </span>
           </div>
-          <div className="text-[162px] max-md:text-[56px] font-extrabold max-md:leading-none">
+          <div className="text-[162px] max-xl:text-[122px] max-md:text-[56px] font-extrabold max-md:leading-none">
             2K25
           </div>
         </div>
