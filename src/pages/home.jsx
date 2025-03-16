@@ -331,7 +331,7 @@ const Home = () => {
           <img
             src={heart}
             alt=""
-            className="absolute top-[-50px] left-[-80px] max-md:left-[-10%] w-[120px]  rotate-[-30deg] max-md:w-[80px]"
+            className="absolute top-[-50px] left-[-80px] max-md:left-[-10%] w-[120px]  rotate-[-30deg] max-md:w-[60px]"
           />
           <img
             src={music}
@@ -382,7 +382,7 @@ const Home = () => {
               follow us on
             </p>
 
-            <div className="flex gap-6 flex-wrap">
+            <div className="flex gap-6 max-md:gap-4 flex-wrap">
               {socialLinks.map(({ icon, name }, index) => (
                 <div
                   key={index}
