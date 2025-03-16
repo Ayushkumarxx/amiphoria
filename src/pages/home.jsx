@@ -167,23 +167,25 @@ const Home = () => {
       <Navbar />
 
       {/* hero section */}
-      <div className="home h-[665px] relative max-w-[1350px] mt-4 px-[10px] mx-auto">
-        <div className="h-[600px] absolute right-[75px] bottom-[0px]">
+      <div className="home h-[665px] max-md:h-auto relative max-w-[1350px] mt-4 px-[10px] mx-auto">
+
+        {/* actress photo */}
+        <div className="h-[600px] absolute right-[75px] bottom-[0px] max-md:hidden">
           <img
             src={actress}
             alt="actress"
             className="w-full h-full object-contain grayscale-100"
           />
         </div>
-
+         {/* head text */}
         <div className="nt-big-text flex justify-between items-center   ">
-          <div className="text-[162px] font-extrabold relative">
+          <div className="text-[162px] max-md:text-[42px] font-extrabold relative">
             Amiphoria{" "}
-            <span className="absolute text-[24px] left-[85px] top-[50px]">
+            <span className="absolute text-[24px] max-md:text-[12px] left-[15px] top-[0px]">
               Mar 19-21/25
             </span>
           </div>
-          <div className="text-[162px] font-extrabold">2K24</div>
+          <div className="text-[162px] max-md:text-[42px] font-extrabold">2K24</div>
         </div>
 
         <div className="scoialNText flex justify-between items-center">
