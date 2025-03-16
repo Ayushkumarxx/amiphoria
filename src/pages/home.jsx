@@ -43,7 +43,7 @@ const EventCard = ({ img, date, title }) => {
 
 const TicketCard = ({ eventTitle, eventTitle2 }) => {
   return (
-    <div className="flex p-2 h-[90%] w-[30%] bg-[#EFDBD0] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] shrink-0">
+    <div className="flex p-2 h-[90%] w-[30%] max-md:w-[300px] bg-[#EFDBD0] shadow-[0_0_0_2px_rgba(0,0,0,1),-8px_-8px_0_0_rgba(0,0,0,1)] shrink-0">
       {/* Vertical Text */}
       <div className="text-[12px] bg-black text-white w-[20px] h-full flex items-center justify-center writing-mode-vertical-rl">
         JOIN THE FUN NOW
@@ -51,8 +51,8 @@ const TicketCard = ({ eventTitle, eventTitle2 }) => {
 
       {/* Event Details */}
       <div className="flex flex-col gap-[10px] p-4 w-[90%]">
-        <div className="text-[18px] font-semibold">Thrusday-Friday</div>
-        <div className="text-[32px] leading-[20px]">
+        <div className="text-[18px] max-md:text-[12px]   font-semibold">Thrusday-Friday</div>
+        <div className="text-[32px] max-md:text-[24px] leading-[20px]">
           <span className="text-outline font-sans">{eventTitle}</span>{" "}
           {eventTitle2}
         </div>
@@ -301,7 +301,7 @@ const Home = () => {
           <TicketCard eventTitle={"DJ"} eventTitle2={"Night"} />
         </div>
 
-        <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2 -translate-x-30">
+        <div className="w-[110vw] h-[30%] flex justify-between items-center gap-[40px] overflow-hidden -rotate-2 -translate-x-30 max-md:-translate-x-0">
           <TicketCard eventTitle={"OPEN"} eventTitle2={"MIC"} />
           <TicketCard eventTitle={"SPORT"} eventTitle2={"EVENT"} />
           <TicketCard eventTitle={"ESPORT"} eventTitle2={"TEAM"} />
