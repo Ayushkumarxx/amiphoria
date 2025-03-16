@@ -24,6 +24,8 @@ import { FaFacebook, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
+import useNavigation from "../utils/navigation";
+import Routes from "../utils/routes";
 
 const EventCard = ({ img, date, title }) => {
   return (
@@ -162,6 +164,7 @@ const TicketCard2 = ({ img, h, w, hidden }) => {
 };
 
 const Home = () => {
+  const navigateTo = useNavigation();
   const socialLinks = [
     { icon: <FaInstagram />, name: "Instagram" },
     // { icon: <FaXTwitter />, name: "Twitter" },
@@ -192,7 +195,7 @@ const Home = () => {
             </span>
           </div>
           <div className="text-[162px] max-md:text-[56px] font-extrabold max-md:leading-none">
-            2K24
+            2K25
           </div>
         </div>
 
@@ -277,7 +280,7 @@ const Home = () => {
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
               <div className="text-[24px] max-md:text-[16px]  font-bold text-[#fff]">Join</div>
-              <img src={sparkle} alt="" className="w-[40px]" />
+              <img src={sparkle} alt="" className="w-[40px] max-md:w-[25px]" />
             </div>
           ))}
         </div>
@@ -285,7 +288,7 @@ const Home = () => {
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
               <div className="text-[24px] max-md:text-[16px] font-bold text-[#fff]">Fast</div>
-              <img src={sparkle} alt="" className="w-[40px] " />
+              <img src={sparkle} alt="" className="w-[40px] max-md:w-[20px]" />
             </div>
           ))}
         </div>
