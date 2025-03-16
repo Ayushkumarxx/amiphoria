@@ -16,18 +16,18 @@ const LogoDiv = ({ spon }) => {
 
 const Sponsors = () => {
   return (
-    <div className="bg-[#F2ECE7]">
+    <section className="bg-[#F2ECE7]">
       <Navbar />
-      <div className="flex h-[90vh] max-w-[1350px] mx-auto   ">
+      <div className="flex max-md:flex-col h-[90vh] max-md:h-auto max-w-[1350px] mx-auto   ">
         {/* Left Fixed Section */}
-        <div className="w-1/2 h-full overflow-y-hidden p-4 flex ">
+        <div className="w-1/2 max-md:w-full h-full overflow-y-hidden p-4 flex ">
           <div className="flex w-[20%] flex-col justify-around items-start ">
             <div className="h-[80%] w-0.5 bg-[#A9EB09]">
             </div>
             <img src={heart} alt="" className="w-[30px] " />
 
           </div>
-          <div className="text-7xl font-extrabold leading-normal">
+          <div className="text-7xl max-md:text-3xl font-extrabold leading-normal">
             <h2>Sponsors</h2>
             <h2>Sponsors</h2>
             <h2>Sponsors</h2>
@@ -43,7 +43,7 @@ const Sponsors = () => {
         </div>
 
         {/* Right Scrollable Section */}
-        <div className="w-1/2 h-full overflow-y-auto py-8 px-4 scrollbar-hidden">
+        <div className="w-1/2 max-md:w-full h-full overflow-y-auto py-8 px-4 scrollbar-hidden">
           <h2 className="text-[18px] font-bold">Gold Sponsors</h2>
 
           <div className="flex gap-4 flex-wrap mt-2">
@@ -74,7 +74,7 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
