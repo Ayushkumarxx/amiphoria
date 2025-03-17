@@ -33,7 +33,7 @@ const EventCard = ({ img, date, title }) => {
   const navigateTo = useNavigation();
   return (
     <div
-      className="flex flex-col w-[280px] max-md:w-[80%] h-[400px] max-md:h-[300px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] cursor-pointer  hover:scale-102 transition-all duration-200 ease-in-out"
+      className="flex flex-col w-[280px] max-md:w-[48%] h-[400px] max-md:h-[300px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] cursor-pointer  hover:scale-102 transition-all duration-200 ease-in-out"
       onClick={() => navigateTo(Routes.Events)}
     >
       <img
@@ -41,11 +41,11 @@ const EventCard = ({ img, date, title }) => {
         alt=""
         className="w-full h-[85%] max-md:h-[65%] object-cover grayscale-100"
       />
-      <div className="w-full flex flex-col p-4 justify-between">
-        <p className="text-[16px] max-md:text-[14px] font-bold text-zinc-200 mt-4">
+      <div className="w-full flex flex-col p-4 max-md:p-2 justify-between">
+        <p className="text-[16px] max-md:text-[12px] font-bold text-zinc-200 mt-4">
           {date}
         </p>
-        <p className="text-[22px] max-md:text=[18px] font-bold text-[#fff]">
+        <p className="text-[22px] max-md:text=[16px] font-bold text-[#fff]">
           {title}
         </p>
       </div>
@@ -335,7 +335,7 @@ const Home = () => {
           Events We <span className="text-[#EF64FE]">Organize</span>
         </h2>
 
-        <div className="flex max-md:flex-col max-md:items-center max-md:gap-5 justify-between mt-6 w-[80%] max-md:w-full">
+        <div className="flex flex-wrap  max-md:space-y-5 justify-between mt-6 w-[80%] max-md:w-full max-md:px-2">
           <EventCard
             img={event1}
             date="19 Mar 2025"
