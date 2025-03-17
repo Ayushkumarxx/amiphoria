@@ -72,7 +72,7 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-lg flex flex-col items-center justify-center gap-8 z-30"
+            className="fixed inset-0 bg-black/60 backdrop-blur-lg flex flex-col items-center justify-center gap-10 z-30"
           >
             {navLinks.map(({ name, path }, index) => (
               <motion.div
@@ -84,7 +84,7 @@ const Navbar = () => {
               >
                 <Link
                   to={path}
-                  className="text-3xl md:text-5xl font-bold text-white hover:text-[#A9EB09] transition duration-300"
+                  className="text-[26px] md:text-5xl font-bold text-white hover:text-[#A9EB09] transition duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   {name}
