@@ -25,7 +25,7 @@ import octagon from './octagon.png';
 
 import team1 from './team-1.jpg'
 import team2 from './team-2.jpg'
-import team3 from './team-3.jpg'
+import team3 from './team-3.jpeg'
 import team4 from './team-4.jpg'
 import fest from './fest.jpeg'
 export {logo, actress, spon1, spon2, spon3, spon4, spon5, plane , music, heart, circle, sparkle, king, event1, event2, event3, event4,event5, slash, octagon, team1, team2, team3, team4, fest};
