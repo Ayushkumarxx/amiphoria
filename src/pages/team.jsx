@@ -44,9 +44,9 @@ const Team = () => {
 
         {/* left section */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2}}
         >
           <div className="text-[142px] max-md:text-[36px] leading-none mb-2 font-bold max-xl:text-[124px]">MEET</div>
           <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] ">
@@ -55,8 +55,8 @@ const Team = () => {
         </motion.div>
         {/* right section */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] mb-2 ">
@@ -71,7 +71,7 @@ const Team = () => {
       <motion.section className="max-w-[1250px] mt-[50px] mx-auto pb-10 px-2.5"
         initial={{ opacity: 0 , y: isMobile ? 20 : 50}}
         animate={{ opacity: 1 , y: 0}}
-        transition={{ duration: 0.6, delay: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.6 , ease: "easeInOut" }}
       >
         <div className="w-full h-[2px] bg-black mt-[20px]"
      
