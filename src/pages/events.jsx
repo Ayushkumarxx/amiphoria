@@ -183,7 +183,7 @@ const Events = () => {
 
         {/* images card */}
         <motion.div
-          className="flex flex-wrap w-full justify-between mt-[10px]  items-center px-[50px] max-md:px-[10px]"
+          className="flex flex-wrap w-full  justify-between mt-[10px]  items-center px-[50px] max-md:px-[10px]"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
