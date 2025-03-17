@@ -67,15 +67,13 @@ const Team = () => {
       {/* second section */}
 
       <motion.section className="max-w-[1250px] mt-[50px] mx-auto pb-10 px-2.5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
+        initial={{ opacity: 0 , y: 50}}
+        animate={{ opacity: 1 , y: 0}}
+        transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <motion.div className="w-full h-[2px] bg-black mt-[20px]"
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 1.2, delay: 0.6 }}
-        ></motion.div>
+        <div className="w-full h-[2px] bg-black mt-[20px]"
+     
+        ></div>
 
         {/* some words */}
         <div className="max-md:text-[12px] text-[18px] font-semibold ">
