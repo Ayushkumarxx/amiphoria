@@ -5,6 +5,7 @@ import { MdOutlineElectricBolt } from "react-icons/md";
 import { SiYoutubegaming } from "react-icons/si";
 import useNavigation from "../utils/navigation";
 import Routes from "../utils/routes";
+import { motion } from "framer-motion";
 
 //for section 1
 function ImageCard({ name, imageUrl }) {
@@ -100,56 +101,82 @@ const Events = () => {
   return (
     <div className="relative h-screen w-full overflow-y-auto overflow-x-hidden">
       {/* Section 1 */}
-      <section className="h-screen w-full bg-[#FEEE01] sticky top-0 z-10 ">
-        <Navbar />
+      <motion.section
+      className="h-screen w-full bg-[#FEEE01] sticky top-0 z-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <Navbar />
 
-        {/* main content */}
+      {/* main content */}
+      <div className="flex flex-col mt-6 items-center">
+        <motion.h1
+          className="text-[122px] max-md:text-[52px] font-extrabold text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          CULTURAL EVENT
+        </motion.h1>
 
-        <div className="flex flex-col mt-6  items-center">
-          <h1 className="text-[122px] max-md:text-[52px] font-extrabold text-center">
-            CULTURAL EVENT
-          </h1>
-
-          {/* date line */}
-          <div className="w-[120vw] h-[60px]   flex items-center justify-between  -translate-x-10">
-            {[...Array(12)].map((_, index) => (
-              <div key={index} className="flex items-center ">
-                <div className="text-[46px] w-[150px] max-md:w-[50px] max-md:text-[18px] font-extrabold text-black">
-                  21
-                </div>
-                <img src={slash} alt="" className="w-[50px] max-md:w-[25px] " />
-                <img src={slash} alt="" className="w-[50px] max-md:hidden" />
+        {/* date line */}
+        <div className="w-[120vw] h-[60px] flex items-center justify-between -translate-x-10">
+          {[...Array(12)].map((_, index) => (
+            <motion.div
+              key={index}
+              className="flex items-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <div className="text-[46px] w-[150px] max-md:w-[50px] max-md:text-[18px] font-extrabold text-black">
+                21
               </div>
-            ))}
-          </div>
-
-          <h1
-            class="text-6xl max-md:text-3xl font-bold text-outline mt-10 font-sans cursor-pointer hover:text-[#504D00]"
-            onClick={() => navigateTo(Routes.Register)}
-          >
-            TAKE PART
-          </h1>
-        </div>
-
-        {/* divider */}
-
-        <div className="flex justify-between mt-[50px] items-center text-2xl  max-md:text-[16px] font-bold">
-          <div className="w-[30%] max-md:w-[5%] h-[2px] bg-black"></div>
-          <div className="text-[#504D00]">WEDNESDAY</div>
-          <div className="underline">FRIDAY </div>
-          <div className="text-[#504D00]">THRUSDAY </div>
-
-          <div className="w-[30%]  max-md:w-[5%] h-[2px] bg-black"></div>
-        </div>
-
-        {/* images card */}
-
-        <div className="flex flex-wrap justify-between mt-[10px] items-center px-[50px] max-md:px-[10px]">
-          {Culturalimages.map((item, index) => (
-            <ImageCard key={index} name={item.name} imageUrl={item.imageUrl} />
+              <img src={slash} alt="" className="w-[50px] max-md:w-[25px]" />
+              <img src={slash} alt="" className="w-[50px] max-md:hidden" />
+            </motion.div>
           ))}
         </div>
-      </section>
+
+        <motion.h1
+          className="text-6xl max-md:text-3xl font-bold text-outline mt-10 font-sans cursor-pointer hover:text-[#504D00]"
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          onClick={() => navigateTo(Routes.Register)}
+        >
+          TAKE PART
+        </motion.h1>
+      </div>
+
+      {/* divider */}
+      <motion.div
+        className="flex justify-between mt-[50px] items-center text-2xl max-md:text-[16px] font-bold"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
+        <div className="w-[30%] max-md:w-[5%] h-[2px] bg-black"></div>
+        <div className="text-[#504D00]">WEDNESDAY</div>
+        <div className="underline">FRIDAY</div>
+        <div className="text-[#504D00]">THURSDAY</div>
+        <div className="w-[30%] max-md:w-[5%] h-[2px] bg-black"></div>
+      </motion.div>
+
+      {/* images card */}
+      <div className="flex flex-wrap justify-between mt-[10px] items-center px-[50px] max-md:px-[10px]">
+        {Culturalimages.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+          >
+            <ImageCard name={item.name} imageUrl={item.imageUrl} />
+          </motion.div>
+        ))}
+      </div>
+    </motion.section>
 
       {/* Section 2 */}
       <section className="h-[105vh] max-md:h-screen w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center ">

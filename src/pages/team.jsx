@@ -49,7 +49,7 @@ const Team = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut"}}
         >
           <div className="text-[142px] max-md:text-[36px] leading-none mb-2 font-bold max-xl:text-[124px]">MEET</div>
-          <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] ">
+          <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[12px] ">
             Chill <IoSparklesSharp /> Guyz
           </div>
         </motion.div>
@@ -59,7 +59,7 @@ const Team = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 , ease: "easeInOut"}}
         >
-          <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] mb-2 ">
+          <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[12px] mb-2 ">
             Unique <IoSparklesSharp /> Talented <IoSparklesSharp /> Perfect
           </div>
           <div className="text-[142px] max-md:text-[36px] font-bold leading-none max-xl:text-[114px]">OUR TEAM</div>
