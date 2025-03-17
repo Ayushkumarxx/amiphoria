@@ -32,6 +32,8 @@ const TeamSection = () => {
   );
 };
 const Team = () => {
+
+  const isMobile = window.innerWidth < 768;
   return (
     <section className="bg-[#F2ECE7] ">
       <Navbar />
@@ -67,7 +69,7 @@ const Team = () => {
       {/* second section */}
 
       <motion.section className="max-w-[1250px] mt-[50px] mx-auto pb-10 px-2.5"
-        initial={{ opacity: 0 , y: 50}}
+        initial={{ opacity: 0 , y: isMobile ? 20 : 50}}
         animate={{ opacity: 1 , y: 0}}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
