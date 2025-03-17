@@ -44,7 +44,7 @@ const Team = () => {
 
         {/* left section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: isMobile ? 20 : 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut"}}
         >
@@ -55,7 +55,7 @@ const Team = () => {
         </motion.div>
         {/* right section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: isMobile ? 20 : 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 , ease: "easeInOut"}}
         >
