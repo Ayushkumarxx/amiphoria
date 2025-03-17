@@ -33,7 +33,7 @@ const EventCard = ({ img, date, title }) => {
   const navigateTo = useNavigation();
   return (
     <div
-      className="flex flex-col w-[280px] max-md:w-[48%] h-[400px] max-md:h-[300px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] cursor-pointer  hover:scale-102 transition-all duration-200 ease-in-out"
+      className="flex flex-col w-[280px] max-md:w-[48%] h-[400px] max-md:h-[280px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] cursor-pointer  hover:scale-102 transition-all duration-200 ease-in-out"
       onClick={() => navigateTo(Routes.Events)}
     >
       <img
@@ -45,7 +45,7 @@ const EventCard = ({ img, date, title }) => {
         <p className="text-[16px] max-md:text-[12px] font-bold text-zinc-200 mt-4">
           {date}
         </p>
-        <p className="text-[22px] max-md:text=[16px] font-bold text-[#fff]">
+        <p className="text-[22px] max-md:text=[14px] font-bold text-[#fff]">
           {title}
         </p>
       </div>
