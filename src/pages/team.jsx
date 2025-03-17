@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar } from "../components/index";
 import { IoSparklesSharp } from "react-icons/io5";
 import { team1, team2, team3, team4 } from "../assets/index";
-
+import {motion} from 'framer-motion';
 
 // team members cards
 const teamMembers = [
@@ -20,7 +20,7 @@ const TeamSection = () => {
           <img
             src={member.image}
             alt={member.name}
-            className="w-full h-[80%] object-cover grayscale-100"
+            className="w-full h-[80%] max-md:h-[70%] object-cover grayscale-100"
           />
           <div className="w-full flex flex-col p-2 justify-between items-end">
             <p className="text-[16px] max-md:text-[14px] font-bold text-black mt-2 max-md:mt-1">{member.role}</p>
@@ -41,25 +41,41 @@ const Team = () => {
       <section className="max-w-[1250px] mt-[50px] px-2.5 mx-auto flex justify-between items-center">
 
         {/* left section */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="text-[142px] max-md:text-[36px] leading-none mb-2 font-bold max-xl:text-[124px]">MEET</div>
           <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] ">
             Chill <IoSparklesSharp /> Guyz
           </div>
-        </div>
+        </motion.div>
         {/* right section */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="border-[4px] border-dashed h-[100px] max-md:h-[50px] flex justify-around  items-center p-2.5 text-[32px] max-md:text-[14px] mb-2 ">
             Unique <IoSparklesSharp /> Talented <IoSparklesSharp /> Perfect
           </div>
           <div className="text-[142px] max-md:text-[36px] font-bold leading-none max-xl:text-[114px]">OUR TEAM</div>
-        </div>
+        </motion.div>
       </section>
 
       {/* second section */}
 
-      <section className="max-w-[1250px] mt-[50px] mx-auto pb-10 px-2.5">
-        <div className="w-full h-[2px] bg-black mt-[20px]"></div>
+      <motion.section className="max-w-[1250px] mt-[50px] mx-auto pb-10 px-2.5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <motion.div className="w-full h-[2px] bg-black mt-[20px]"
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        ></motion.div>
 
         {/* some words */}
         <div className="max-md:text-[12px] text-[18px] font-semibold ">
@@ -67,7 +83,7 @@ const Team = () => {
         </div>
 
         <TeamSection />
-      </section>
+      </motion.section>
     </section>
   );
 };
