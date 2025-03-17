@@ -45,7 +45,7 @@ const EventCard = ({ img, date, title }) => {
         <p className="text-[16px] max-md:text-[12px] font-bold text-zinc-200 mt-4">
           {date}
         </p>
-        <p className="text-[22px] max-md:text=[14px] font-bold text-[#fff]">
+        <p className="text-[22px] max-md:text-[14px] font-bold text-[#fff]">
           {title}
         </p>
       </div>
