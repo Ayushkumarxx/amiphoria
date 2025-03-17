@@ -97,60 +97,86 @@ const Events = () => {
       reverse: false,
     },
   ];
+    // Animation variants for fade-in and slide-up
+    const fadeInUp = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+    };
 
   return (
     <div className="relative h-screen w-full overflow-y-auto overflow-x-hidden">
       {/* Section 1 */}
-      <section className="h-screen w-full bg-[#FEEE01] sticky top-0 z-10 ">
-        <Navbar />
+      <section className="h-screen w-full bg-[#FEEE01] sticky top-0 z-10">
+      <Navbar />
 
-        {/* main content */}
+      {/* main content */}
+      <div className="flex flex-col mt-6 items-center">
+        <motion.h1
+          className="text-[122px] max-md:text-[52px] font-extrabold text-center"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+        >
+          CULTURAL EVENT
+        </motion.h1>
 
-        <div className="flex flex-col mt-6  items-center">
-          <h1 className="text-[122px] max-md:text-[52px] font-extrabold text-center">
-            CULTURAL EVENT
-          </h1>
-
-          {/* date line */}
-          <div className="w-[120vw] h-[60px]   flex items-center justify-between  -translate-x-10">
-            {[...Array(12)].map((_, index) => (
-              <div key={index} className="flex items-center ">
-                <div className="text-[46px] w-[150px] max-md:w-[50px] max-md:text-[18px] font-extrabold text-black">
-                  21
-                </div>
-                <img src={slash} alt="" className="w-[50px] max-md:w-[25px] " />
-                <img src={slash} alt="" className="w-[50px] max-md:hidden" />
+        {/* date line */}
+        <motion.div
+          className="w-[120vw] h-[60px] flex items-center justify-between -translate-x-10"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut', delay: 0.2 } },
+          }}
+        >
+          {[...Array(12)].map((_, index) => (
+            <div key={index} className="flex items-center">
+              <div className="text-[46px] w-[150px] max-md:w-[50px] max-md:text-[18px] font-extrabold text-black">
+                21
               </div>
-            ))}
-          </div>
-
-          <h1
-            class="text-6xl max-md:text-3xl font-bold text-outline mt-10 font-sans cursor-pointer hover:text-[#504D00]"
-            onClick={() => navigateTo(Routes.Register)}
-          >
-            TAKE PART
-          </h1>
-        </div>
-
-        {/* divider */}
-
-        <div className="flex justify-between mt-[50px] items-center text-2xl  max-md:text-[16px] font-bold">
-          <div className="w-[30%] max-md:w-[5%] h-[2px] bg-black"></div>
-          <div className="text-[#504D00]">WEDNESDAY</div>
-          <div className="underline">FRIDAY </div>
-          <div className="text-[#504D00]">THRUSDAY </div>
-
-          <div className="w-[30%]  max-md:w-[5%] h-[2px] bg-black"></div>
-        </div>
-
-        {/* images card */}
-
-        <div className="flex flex-wrap justify-between mt-[10px] items-center px-[50px] max-md:px-[10px]">
-          {Culturalimages.map((item, index) => (
-            <ImageCard key={index} name={item.name} imageUrl={item.imageUrl} />
+              <img src={slash} alt="" className="w-[50px] max-md:w-[25px]" />
+              <img src={slash} alt="" className="w-[50px] max-md:hidden" />
+            </div>
           ))}
-        </div>
-      </section>
+        </motion.div>
+
+        <motion.h1
+          className="text-6xl max-md:text-3xl font-bold text-outline mt-10 font-sans cursor-pointer hover:text-[#504D00]"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut', delay: 0.4 } },
+          }}
+          onClick={() => navigateTo(Routes.Register)}
+        >
+          TAKE PART
+        </motion.h1>
+      </div>
+
+      {/* divider */}
+      <motion.div className="flex justify-between mt-[50px] items-center text-2xl max-md:text-[16px] font-bold"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        >
+        <div className="w-[30%] max-md:w-[5%] h-[2px] bg-black"></div>
+        <div className="text-[#504D00]">WEDNESDAY</div>
+        <div className="underline">FRIDAY </div>
+        <div className="text-[#504D00]">THRUSDAY </div>
+        <div className="w-[30%] max-md:w-[5%] h-[2px] bg-black"></div>
+      </motion.div>
+
+      {/* images card */}
+      <motion.div className="flex flex-wrap justify-between mt-[10px] items-center px-[50px] max-md:px-[10px]"  initial="hidden"
+          animate="visible"
+          variants={fadeInUp}>
+        {Culturalimages.map((item, index) => (
+          <ImageCard key={index} name={item.name} imageUrl={item.imageUrl} />
+        ))}
+      </motion.div>
+    </section>
 
       {/* Section 2 */}
       <section className="h-[105vh] max-md:h-screen w-full bg-[#d03641] sticky top-0 z-20 flex flex-col items-center justify-center ">

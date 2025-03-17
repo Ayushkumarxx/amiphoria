@@ -7,12 +7,12 @@ import spon3 from './spon-3.avif';
 import spon4 from './spon-4.avif';
 import spon5 from './spon-5.avif';
 
-import heart from './heart.svg';
-import plane from './plane.svg';
-import music from './music.svg';
-import circle from './circle.svg';
-import sparkle from './sparkle.svg';
-import king from './king.svg';
+import heart from './svg/heart.svg';
+import plane from './svg/plane.svg';
+import music from './svg/music.svg';
+import circle from './svg/circle.svg';
+import sparkle from './svg/sparkle.svg';
+import king from './svg/king.svg';
 
 import event1 from './event-1.avif';
 import event2 from './event-2.jpg';
