@@ -33,7 +33,7 @@ const EventCard = ({ img, date, title }) => {
   const navigateTo = useNavigation();
   return (
     <div
-      className="flex flex-col w-[280px] max-md:w-[48%] h-[400px] max-md:h-[265px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] cursor-pointer  hover:scale-102 transition-all duration-200 ease-in-out"
+      className="flex flex-col w-[285px] max-md:w-[48%] h-[400px] max-md:h-[265px] overflow-hidden bg-[#8B1E1E] shadow-[0_0_0_2px_#8B1E1E] cursor-pointer  hover:scale-102 transition-all duration-200 ease-in-out"
       onClick={() => navigateTo(Routes.Events)}
     >
       <img
@@ -42,10 +42,10 @@ const EventCard = ({ img, date, title }) => {
         className="w-full h-[85%] max-md:h-[70%] object-cover grayscale-100"
       />
       <div className="w-full flex flex-col p-4 max-md:p-2 justify-between">
-        <p className="text-[16px] max-md:text-[12px] font-bold text-zinc-200 mt-4">
+        <p className="text-[14px] max-md:text-[12px] font-bold text-zinc-200 mt-4">
           {date}
         </p>
-        <p className="text-[22px] max-md:text-[16px] font-bold text-[#fff]">
+        <p className="text-[18px] max-md:text-[16px] font-bold text-[#fff]">
           {title}
         </p>
       </div>
@@ -335,7 +335,7 @@ const Home = () => {
           Events We <span className="text-[#EF64FE]">Organize</span>
         </h2>
 
-        <div className="flex flex-wrap  max-md:space-y-5 justify-between mt-6 w-[80%] max-md:w-full max-md:px-2">
+        <div className="flex flex-wrap gap-2 space-y-5 justify-between mt-6 w-[85%] max-md:w-full max-md:px-2">
           <EventCard
             img={event1}
             date="19 Mar 2025"
@@ -351,20 +351,20 @@ const Home = () => {
         <div className="w-[120vw] h-[60px] max-md:h-[50px] bg-[#EF64FE] mt-20 flex items-center justify-between rotate-2  -translate-x-10 origin-center gap-[30px]">
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
-              <div className="text-[24px] max-md:text-[16px]  font-bold text-[#fff]">
+              <div className="text-[22px] max-md:text-[16px]  font-bold text-[#fff]">
                 Join
               </div>
-              <img src={sparkle} alt="" className="w-[40px] max-md:w-[25px]" />
+              <img src={sparkle} alt="" className="w-[35px] max-md:w-[25px]" />
             </div>
           ))}
         </div>
         <div className="w-[120vw] h-[60px]  max-md:h-[50px] bg-[#8B1E1E] mt-4 flex items-center justify-between -rotate-4 origin-left translate-x-10 gap-[30px]">
           {[...Array(12)].map((_, index) => (
             <div key={index} className="flex items-center gap-[30px]">
-              <div className="text-[24px] max-md:text-[16px] font-bold text-[#fff]">
+              <div className="text-[22px] max-md:text-[16px] font-bold text-[#fff]">
                 Fast
               </div>
-              <img src={sparkle} alt="" className="w-[40px] max-md:w-[20px]" />
+              <img src={sparkle} alt="" className="w-[35px] max-md:w-[20px]" />
             </div>
           ))}
         </div>
