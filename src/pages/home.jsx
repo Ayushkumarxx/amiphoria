@@ -45,7 +45,7 @@ const EventCard = ({ img, date, title }) => {
         <p className="text-[16px] max-md:text-[12px] font-bold text-zinc-200 mt-4">
           {date}
         </p>
-        <p className="text-[22px] max-md:text-[14px] font-bold text-[#fff]">
+        <p className="text-[22px] max-md:text-[16px] font-bold text-[#fff]">
           {title}
         </p>
       </div>
@@ -133,20 +133,20 @@ const Footer = () => {
 
         {/* Contact Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Get In Touch</h3>
-          <p className="text-sm">+91-8210685150</p>
-          <p className="text-sm">ayushkumar09005@gmail.com</p>
+          <h3 className="text-lg font-semibold mb-3">Get Registered</h3>
+          <p className="text-sm">register via online form or</p>
+          <p className="text-sm">visit the campus to register</p>
 
           <h3 className="text-lg font-semibold mt-4 mb-2">Address</h3>
           <p className="text-sm">
             Hec core area, near railway crossing, <br />
-            pundag , ranchi , <br /> jharkhand 834001
+            pundag , ranchi , <br /> jharkhand 834004
           </p>
         </div>
 
         {/* Opening Time */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">EventTime</h3>
+          <h3 className="text-lg font-semibold mb-3">Event Time</h3>
           <p className="text-sm">
             <span className="font-semibold">Thu-Friday:</span> 9:00 am - 6:00 pm
           </p>
@@ -341,8 +341,8 @@ const Home = () => {
             date="19 Mar 2025"
             title="Cultural Festival"
           />
-          <EventCard img={event2} date="19 Mar 2025" title="Acedemic Bets" />
-          <EventCard img={event3} date="20 Mar 2025" title="Sports Disk" />
+          <EventCard img={event2} date="19 Mar 2025" title="Acedemic Events" />
+          <EventCard img={event3} date="20 Mar 2025" title="Sports Show" />
           <EventCard img={event4} date="21 Mar 2025" title="Tech Fest" />
         </div>
 
