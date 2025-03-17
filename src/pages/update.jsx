@@ -1,7 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "../components/index";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa6";
 import useNavigation from "../utils/navigation";
 import Routes from "../utils/routes";
 
@@ -13,7 +18,6 @@ const Update = () => {
       <Navbar />
       {/* main content */}
       <div className="max-w-[1350px] mx-auto py-[10px] px-[10px] h-[90vh] max-md:h-auto flex max-md:flex-col">
-        
         {/* First section */}
         <div className="w-[50%] max-md:w-full h-full flex flex-col py-14 justify-between">
           {["Latest", "Updates", "Amiphoria"].map((text, index) => (
@@ -46,7 +50,7 @@ const Update = () => {
           </motion.div>
 
           <div className="flex gap-5 mt-[30px]">
-            {[ 
+            {[
               { icon: <FaFacebook />, label: "Facebook", link: Routes.FB },
               { icon: <FaInstagram />, label: "Instagram", link: Routes.Insta },
             ].map((social, index) => (
@@ -63,8 +67,12 @@ const Update = () => {
           </div>
 
           <div className="flex gap-5 mt-[10px]">
-            {[ 
-              { icon: <FaLinkedin />, label: "LinkedIn", link: Routes.LinkedIn },
+            {[
+              {
+                icon: <FaLinkedin />,
+                label: "LinkedIn",
+                link: Routes.LinkedIn,
+              },
               { icon: <FaYoutube />, label: "YouTube", link: Routes.Yt },
             ].map((social, index) => (
               <motion.div

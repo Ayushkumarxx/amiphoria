@@ -12,7 +12,7 @@ const containerVariants = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1}, // Staggered delay between children
+    transition: { staggerChildren: 0.1 }, // Staggered delay between children
   },
 };
 
@@ -69,7 +69,6 @@ const Sponsors = () => {
             initial="hidden"
             animate="visible"
             className="flex gap-4 flex-wrap mt-2"
-            
           >
             <LogoDiv spon={spon1} />
             <LogoDiv spon={spon2} />
@@ -100,7 +99,6 @@ const Sponsors = () => {
             initial="hidden"
             animate="visible"
             className="flex gap-4 flex-wrap mt-2"
-            
           >
             <LogoDiv spon={spon1} />
             <LogoDiv spon={spon2} />
@@ -108,8 +106,6 @@ const Sponsors = () => {
             <LogoDiv spon={spon4} />
             <LogoDiv spon={spon5} />
           </motion.div>
-
-
         </div>
       </div>
     </section>
