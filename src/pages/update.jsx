@@ -29,12 +29,12 @@ const Update = () => {
           ))}
         </div>
 
-        {/* Second section */}
+        {/* Second section (Fades in, no slide animation) */}
         <motion.div
           className="w-[50%] max-md:w-full h-full flex flex-col py-14 px-[10%] max-md:px-[0%]"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           <motion.div
             className="text-[18px] font-semibold"
@@ -88,8 +88,8 @@ const Update = () => {
 
           <motion.div
             className="text-[72px] max-md:text-[36px] font-semibold mt-[20px] text-orange-200"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             2K25
@@ -97,8 +97,8 @@ const Update = () => {
 
           <motion.div
             className="text-[18px] max-md:text-[14px] font-normal mt-[10px]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             Stay updated with the latest happenings at Amiphoria! From exciting
